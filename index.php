@@ -31,8 +31,8 @@ $pdo = new PDO("pgsql:" . sprintf(
 		<?php
 			foreach ($resultSet as $row)
 			{
-				echo"<li>" ,
-					$row["studentname"] , '--', $row["course"], "</li>";
+				echo"<li>" .
+					$row["studentname"] . '--'. $row["course"]. "</li>";
 			}
 		?>
 	</ul>

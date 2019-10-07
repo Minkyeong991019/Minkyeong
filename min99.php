@@ -18,7 +18,7 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 	//you sql query
-	$sql = "SELECT  productID, productName, price FROM Product";
+	$sql = "SELECT  productid, productname, price FROM Product";
 
 	$stmt = $pdo->prepare($sql);
 	//execute the query on the server and return the result set
@@ -32,7 +32,7 @@ $pdo = new PDO("pgsql:" . sprintf(
 			foreach ($resultSet as $row)
 			{
 				echo"<li>" .
-					$row["productID"] . '--'. $row["productName"]. '--'. $row["price"]. "</li>";
+					$row["productid"] . '--'. $row["productname"]. '--'. $row["price"]. "</li>";
 			}
 		?>
 	</ul>

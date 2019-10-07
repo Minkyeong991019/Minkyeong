@@ -36,6 +36,6 @@ $pdo = new PDO("pgsql:" . sprintf(
 			}
 		?>
 	</ul>
-
+ 
 </body>
 </html>

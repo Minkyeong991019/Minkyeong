@@ -12,7 +12,7 @@
 			
 			<tr>
 				<td>Price</td>
-				<td><input type = "number" name = "price"/></td>
+				<td><input type = "text" name = "txtprice"/></td>
 			</tr>
 			
 			<tr>

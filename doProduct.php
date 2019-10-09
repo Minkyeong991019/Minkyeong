@@ -7,7 +7,7 @@
 	<?php 
 		$name = $_POST["txtName"];
 		$price = $_POST["txtprice"];
-		echo $name;
+		
 		
 		//Refere to database 
 	   $db = parse_url(getenv("DATABASE_URL"));
@@ -27,11 +27,11 @@
 		$stmt->execute($data);
 	 ?>
 	 <h2>Thank you <?php echo $name?>  for submit Product 
-	 		<?php echo $course?>
+
 	 </h2>
 	 <ul>
 	 	<li><?php echo $price?></li>
 	 </ul>
-	 <a href="Min99.php">min99</a>
+	 <a href="min99.php">min99</a>
 </body>
 </html>

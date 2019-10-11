@@ -42,9 +42,14 @@
 		function validate()
 		{
 			var name = document.getElementById("name").vlaue;
+			var gender = document.getElementById("gender").value;
 			if(name.length <6)
 			{
 				alert("Name must have at least 5 characters");
+			}
+			if(gender == null)
+			{
+				alert("You must select gender!");
 			}
 		}
 	</script>

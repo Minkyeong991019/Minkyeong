@@ -3,6 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HTML with JS</title>
+	<style type = "text/css">
+		.error
+		{
+			color: red;
+		}
+	</style>
 </head>
 <body>
 	<h2>Enter your information!</h2>
@@ -39,7 +45,7 @@
 		</tr>
 	</table>
 
-	<ul id = "errorList">
+	<ul id = "errorList" class = "error">
 		
 	</ul>
 
@@ -56,7 +62,7 @@
 				errorList.removeChild(errorList.childNodes[0]);
 			}
 			document.getElementById("errorList").removeall;
-			
+
 			if (name.length <6)
 			{
 				var node = document.createElement("li");

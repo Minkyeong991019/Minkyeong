@@ -38,18 +38,45 @@
 			</td>
 		</tr>
 	</table>
+
+	<ul id = "errorList">
+		
+	</ul>
+
 	<script>
 		function validate()
 		{
 			var name = document.getElementById("name").vlaue;
-			var gender = document.getElementById("gender").value;
+			var gender = document.getElementById("gender");
+			var age = document.getElementById("age").value;
+			var document.getElementById("errorList");
+			//remove the old List
+			while (errorList.hasChildNodes())
+			{
+				errorList.removeChild(errorList.childNodes[0]);
+			}
+			document.getElementById("errorList").removeall;
+			
 			if (name.length <6)
 			{
-				alert("Name must have at least 5 characters");
+				var node = document.createElement("li");
+				var textnode = document.createTextNode("Name must have at least 5 character");
+				node.appendChild(textnode);
+				document.getElementById("errorList").appendChild(node);
 			}
 			if (!gender.checked)
 			{
-				alert("You must select gender!");
+				var node = document.createElement("li");
+				var textnode = document.createTextNode("You must select a gender!");
+				node.appendChild(textnode);
+				document.getElementById("errorList").appendChild(node);
+			}
+			if (isNaN(age) || age <21)
+			{
+				var node = document.createElement("li");
+				var textnode = document.createTextNode("Age is not a number or gender!");
+				node.appendChild(textnode);
+				document.getElementById("errorList").appendChild(node);
 			}
 		}
 	</script>

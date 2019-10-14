@@ -8,11 +8,17 @@
 		{
 			color: red;
 		}
+		#outputDiv{
+			display: none;
+		}
 	</style>
 </head>
 <body>
-	<h2>Enter your information!</h2>
-	<table>
+	<div id = "inputDiv">
+		<h2>Enter your information!</h2>
+		<table>
+		
+	
 		<tr>
 			<td>Name</td>
 			<td><input type = "text" id = "name"></td>
@@ -48,14 +54,37 @@
 	<ul id = "errorList" class = "error">
 		
 	</ul>
+	</div>
+
+	<div id = "outputDiv">
+		<h2>Thank you for your efforts</h2>
+		<ul id = "inputList">
+		</ul>
+	</div>
 
 	<script>
 		function userSubmit()
 		{
-			validate();
+			//if no error, it well show the confirmation.
+			if(validate())
+			{
+				confirmation();
+			}
+		}
+		function confirmation()
+		{
+			var isValid = true;
+			var name = document.getElementById("name").value;
+			var gender = document.getElementById("gender");
+			var age = document.getElementById("age").value;
+			var inputDiv= document.getElementById("inputDiv");
+			var outputDiv = document.getElementById("outputDiv");
+			inputDiv.sytle.display = 'none';
+			autputDiv.style.display = 'block';
 		}
 		function validate()
 		{
+			var isValid = true;
 			var name = document.getElementById("name").value;
 			var gender = document.getElementById("gender");
 			var age = document.getElementById("age").value;
@@ -73,6 +102,7 @@
 				var textnode = document.createTextNode("Name must have at least 5 character");
 				node.appendChild(textnode);
 				document.getElementById("errorList").appendChild(node);
+				isValid = false;
 			}
 			if (!gender.checked)
 			{
@@ -80,6 +110,7 @@
 				var textnode = document.createTextNode("You must select a gender!");
 				node.appendChild(textnode);
 				document.getElementById("errorList").appendChild(node);
+				isValid = false;
 			}
 			if (isNaN(age) || age <21)
 			{
@@ -87,7 +118,9 @@
 				var textnode = document.createTextNode("Age is not a number or gender!");
 				node.appendChild(textnode);
 				document.getElementById("errorList").appendChild(node);
+				isValid = false;
 			}
+			return isValid;
 		}
 	</script>
 </body>

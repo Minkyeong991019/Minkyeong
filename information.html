@@ -36,8 +36,8 @@
 		<tr>
 			<td>Gender</td>
 			<td>
-				<input type = "radio" name = "" id = "gender">Male
-				<input type = "radio" name = "" id = "gender">Female
+				<input type = "radio" name = "gender" id = "genderMale">Male
+				<input type = "radio" name = "gender" id = "genderFemale">Female
 			</td>
 		</tr>
 		<tr>
@@ -75,18 +75,35 @@
 		{
 			var isValid = true;
 			var name = document.getElementById("name").value;
-			var gender = document.getElementById("gender");
+			
 			var age = document.getElementById("age").value;
 			var inputDiv= document.getElementById("inputDiv");
 			var outputDiv = document.getElementById("outputDiv");
-			inputDiv.sytle.display = 'none';
-			autputDiv.style.display = 'block';
+			inputDiv.style.display = 'none';
+			outputDiv.style.display = 'block';
+			var inputList = document.getElementById('inputList');
+
+			var node = document.createElement("li");
+			var textnode = document.createTextNode("Your name "+ name);
+			node.appendChild(textnode);
+			inputList.appendChild(node);
+
+			if(document.getElementById('genderMale').checked)
+				gender = "Male";
+			else
+				gender = "Female";
+
+			node = document.createElement("li");
+			var textnode = document.createTextNode("Your gender "+ gender);
+			node.appendChild(textnode);
+			inputList.appendChild(node);
 		}
 		function validate()
 		{
 			var isValid = true;
 			var name = document.getElementById("name").value;
-			var gender = document.getElementById("gender");
+			var genderMale = document.getElementById("genderMale");
+			var genderFemale = document.getElementById("genderFemale");
 			var age = document.getElementById("age").value;
 			var errorList= document.getElementById("errorList");
 			//remove the old List
@@ -104,7 +121,7 @@
 				document.getElementById("errorList").appendChild(node);
 				isValid = false;
 			}
-			if (!gender.checked)
+			if (!genderMale.checked && !genderFemale.checked)
 			{
 				var node = document.createElement("li");
 				var textnode = document.createTextNode("You must select a gender!");

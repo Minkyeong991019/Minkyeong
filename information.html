@@ -40,7 +40,7 @@
 		</tr>
 		<tr>
 			<td colspan = "2">
-				<input type ="button" onclick = "validate()" value = "OK">
+				<input type ="button" onclick = "userSubmit()" value = "OK">
 			</td>
 		</tr>
 	</table>
@@ -50,6 +50,10 @@
 	</ul>
 
 	<script>
+		function userSubmit()
+		{
+			validate();
+		}
 		function validate()
 		{
 			var name = document.getElementById("name").value;

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Name/Country</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<table>
+		<h2>Add name and country</h2>
+		<tr>
+			<td>Name</td>
+			<td><input type = "text"  id = "Name"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Country</td>
+			<td>
+				<select name="country">
+					<option value="Viet">Korea</option>
+					<option value="Malaysia">Malaysia</option>
+					<option value="UAE">UAE</option>
+					<option value="Vietnam">Vietnam</option>
+					<option value="Kenada">Kenada</option>
+					<option value="china">china</option>
+					<option value="Gana">Gana</option>
+					<option value="UK">UK</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+		<td colspan="2">
+			<button style="margin-left: 25%;" type="submit" onclick="userSubmit()" name="ok" >OK</button>
+		</td>
+		</tr>
+	</table>
+
+
+	<table id="inputList" border="blue 2px soild">
+	<tr>
+		
+		<td><b>Name</b></td>
+		<td><b>Country</b></td>
+	</tr>
+
+	</table>
+
+	<script>
+		function userSubmit(){
+			//if no error, it will show the confirmation
+			
+				confirmation();
+		
+		}
+		function confirmation(){
+			var isValid = true;
+			var Name = document.getElementById("Name").value;
+			
+			
+			var inputList = document.getElementById('inputList');
+
+			var node = document.createElement("table");
+			var textnode = document.createTextNode(Name);
+			node.appendChild(textnode);
+			inputList.appendChild(node);
+		}
+		
+
+</script>
+</body>
+</html>

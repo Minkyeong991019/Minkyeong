@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML with JS</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<h1>To Do List</h1>
+	<table>
+	<tr>
+		<td><b>Name</b></td>
+
+		<td><input type="text"  id="Name"></td>
+	</tr>
+	<tr>
+		<td><b>Country</b></td>
+		<td>
+				<select name="country">
+				<option value="VietNam">VietNam</option>
+				<option value="Malaysia">Malaysia</option>
+				<option value="USA">USA</option>
+				</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+
+			<h1 style="margin-left: 25%;"><button type="submit" onclick="userSubmit()" name="ok" >OK</button></h1>
+		</td>
+	</table>
+
+		<table id="inputList" border="blue 1px soild">
+	<tr>
+		
+		<td><b>Name</b></td>
+		<td><b>Country</b></td>
+	</tr>
+	
+		
+
+		</table>`
+<script>
+		function userSubmit(){
+			//if no error, it will show the confirmation
+			
+				confirmation();
+		
+		}
+		function confirmation(){
+			var isValid = true;
+			var Name = document.getElementById("Name").value;
+			
+			
+			var inputList = document.getElementById('inputList');
+
+			var node = document.createElement("table");
+			var textnode = document.createTextNode(Name);
+			node.appendChild(textnode);
+			inputList.appendChild(node);
+		}
+		
+
+</script>
+</body>
+</html>

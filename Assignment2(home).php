@@ -2,10 +2,17 @@
 <html>
 <head>
 	<title>Assignment2</title>
-	<link rel = "asm2style" href = "./home.css">
+	<link rel = "stylesheet" href = "./home.css">
 </head>
 <body>
+	<?php
+	require_once("./DBconnect(asm).php");
+	?>
 	
+
+	<?php
+	require_once("./first(asm).php");
+	?>
 
 	
 
@@ -14,7 +21,9 @@
 			
 		</div>
 
-	
+	<?php
+	require_once("./third(asm).php");
+	?>	
 
 </body>
 </html>

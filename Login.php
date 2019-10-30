@@ -22,7 +22,7 @@
 			<td><div class="header">
 			<ul>
 				
-				<li><b><a href="HomeAsm.php">HOME</a></b></li>
+				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
 				
 				<li><b><a href="AllProduct.php">SHOP</a></b></li>
 				
@@ -31,8 +31,27 @@
 			</td>
 		</tr>
 </table>
-<img src="./Toy1.jpg" style="width: 100%; height:500px;">
-<center><div><h1 class="product"><b>PRODUCTS</b></h1></div></center>
+	<div class="third">
+		 <form method="POST" action="login.php" >
+        <table style="margin-left: 37%;" height="300" >
+        	<tr>
+				<td align="center" colspan="2"><h1>LOGIN</h1></td>
 
-</body>
-</html>
+			</tr>
+            <tr>
+		<td width="150"><b>Username:</b></td>
+		<td width="250"><input type="name" name="username"><br></td>
+	</tr>
+	<tr>
+		<td width="150"><b>Password:</b></td>
+		<td width="250"><input type="password" name="password"><br></td>
+	</tr>
+	<tr>
+    	<td align="center" colspan="2"><b><input type ="submit" value="Log In"></b>
+
+		</td>
+	</tr>
+        </table>
+    </form>
+		</div>
+	</div>

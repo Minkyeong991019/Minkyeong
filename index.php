@@ -18,7 +18,10 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 	//you sql query
-	$sql = "SELECT  studentname, course FROM registercourse";
+	$sql = "SELECT  username, password FROM account";
+	$sql = "SELECT  catid, catname, img FROM category";
+	$sql = "SELECT  productid, productname, price FROM product";
+	$sql = "SELECT  toyid, toyname, image, price, catid FROM toyproduct";
 
 	$stmt = $pdo->prepare($sql);
 	//execute the query on the server and return the result set

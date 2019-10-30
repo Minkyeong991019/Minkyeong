@@ -5,7 +5,7 @@
 <h1>My first PHP page</h1>
 
 <?php
-echo "Show all rows from Postgres Database";
+echo "Show All rows from Postgres Database";
 
 //Refere to database
 $db = parse_url(getenv("DATABASE_URL"));

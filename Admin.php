@@ -45,16 +45,16 @@
 	
       
             <?php
-                $sql = "SELECT toyid, toyName, image, price, catid FROM toyproduct";
+                $sql = "SELECT Toyid, ToyName, Image, Price, Catid FROM toyproduct";
                 $stmt = $pdo->prepare($sql);        
                 $stmt->execute();
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) 
                 {
-                    $Toyid = $row['toyid'];
-                    $ToyName = $row['toyname'];
-                    $Image = $row['image'];
-                    $Price = $row['price'];
-                    $CatId = $row['catid'];
+                    $toyid = $row['toyid'];
+                    $toyname = $row['toyname'];
+                    $image = $row['image'];
+                    $price = $row['price'];
+                    $catid = $row['catid'];
                    
                     $link_image = "./images/item/$iImage";             
                     echo "<tr>";

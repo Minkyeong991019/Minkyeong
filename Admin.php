@@ -32,38 +32,37 @@
 		</tr>
 </table>
 	
-	
-		<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
+	<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
 			<tr>
 				<th>Id</th>
 				<th>Name</th>
 				<th>Image</th>
 				<th>Price</th>
 				<th>CatId</th>
-				 <th colspan="2">Action</th>
+				<th>Action</th>
 			</tr>
 			
 	
       
             <?php
-                $sql = "SELECT toyid, toyName, image, price, catid FROM toyproduct";
+                $sql = "SELECT Toyid, toyName, Image, Price, CatId FROM Toyproduct";
                 $stmt = $pdo->prepare($sql);        
                 $stmt->execute();
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) 
                 {
-                    $toyid = $row['toyid'];
-                    $toyname = $row['toyname'];
-                    $image = $row['image'];
-                    $price = $row['price'];
-                    $catid = $row['catid'];
+                    $Toyid = $row['toyid'];
+                    $ToyName = $row['toyname'];
+                    $Image = $row['image'];
+                    $Price = $row['price'];
+                    $CatId = $row['catid'];
                    
                     $link_image = "./images/item/$iImage";             
                     echo "<tr>";
-                    echo "<td>$Toyid</td>";                
+                    echo "<td>$iId</td>";                
             ?>
             <form action="updateitem.php" method="post">
 
-                  <input type="hidden" name="toyid" value="<?php echo $row['toyid'] ?>" />
+                <input type="hidden" name="toyid" value="<?php echo $row['toyid'] ?>" />
                 <td><input type="text" size="5" name="toyname" required value="<?php echo $row['toyname']; ?>"/></td>          
                 
                 
@@ -72,11 +71,10 @@
                 <td><input type="text" size="5" name="price" required value="<?php echo $row['price']; ?>"/></td>
                 
                 <td><input type="text" size="5" name="catid" required value="<?php echo $row['catid']; ?>"/></td>
-                
             
-              
+                <?php echo "<td ><img src='$link_image' width='200px'></td>"; ?>
 
-                <td><input type="submit" value="Edit" /></td>
+                <td><input type="submit" value="Update" /></td>
             </form>    
                 <td>
                     <form class="frminline" action="deleteitem.php" method="post" onsubmit="return confirmDelete();">
@@ -102,6 +100,5 @@
             </script>
         </table>        
     </div> 
-
 </body>
 </html>

@@ -41,13 +41,13 @@
 				//display the data 
 			?>
 			<ul>
-	<?php
-		foreach ($resultSet as $row) {
-			echo "<li>" .
-				$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
-			. "</li>";
-		}
-	?>
-</ul>
+				<?php
+					foreach ($resultSet as $row) {
+						echo "<li>" .
+							$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
+						. "</li>";
+					}
+				?>
+			</ul>
 	</body>
 </html>

@@ -1,9 +1,37 @@
-<?php
-$connection = mysqli_connect('localhost', 'root', '');
-if (!$connection){
-    die("Database Connection Failed" . mysqli_error($connection));
-}
-$select_db = mysqli_select_db($connection, 'ATN M Toys');
-if (!$select_db){
-    die("Database Selection Failed" . mysqli_error($connection));
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DBLogin</title>
+	<link rel="stylesheet" href="./stylesheethome.css">
+</head>
+<body  style="background-color: #FDC4C4">
+<style>
+		
+ </style>
+<table cellspacing="0" cellpadding="0" width=100% height=auto>
+<tr>
+	<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>
+	<td><b  style = "color: #FEFBFB; font-size: 50px;" class="logo">ATN M Toys</b></td>
+	<td><input type="text"  placeholder="Search..." name="search" class="search-box"></td>
+	<td><b><a href="Login.php">LOGIN</a></b></td>
+	<td><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"></td>
+</tr>
+</table>
+
+<table cellspacing="10" cellpadding="0" width=100% height=auto>
+		<tr>
+			<td><div class="header">
+			<ul>
+				
+				<li><b><a href="AddProduct.php">Product</a></b></li>
+				
+			</ul>
+			</div>
+			</td>
+		</tr>
+</table>
+
+
+</body>
+</html>

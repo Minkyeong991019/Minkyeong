@@ -46,7 +46,7 @@
 	
       
             <?php
-                $sql = "SELECT toyid, toyName, image, price, catid FROM toyproduct";
+                $sql = "SELECT Toyid, toyName, Image, Price, Catid FROM Toyproduct";
                 $stmt = $pdo->prepare($sql);        
                 $stmt->execute();
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) 

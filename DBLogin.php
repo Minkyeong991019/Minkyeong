@@ -1,154 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<script src = "https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
-	<script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-	<style>
-		#userList {
-			  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-			  border-collapse: collapse;
-			  width: 100%;
-			}
 
-		#userList td, #userList th {
-			  border: 1px solid #ddd;
-			  padding: 8px;
-			}
+<html>
 
-		#userList tr:nth-child(even){background-color: #f2f2f2;}
+    <head>
+    	<link rel="stylesheet" href="./styleecheethome.css">
 
-		#userList tr:hover {background-color: #ddd;}
+        <title>Add Item ATN </title>
 
-		#userList th {
-			  padding-top: 12px;
-			  padding-bottom: 12px;
-			  text-align: left;
-			  background-color: #4CAF50;
-			  color: white;
-			}
-	</style>
+        <meta charset="UTF-8">
 
-	<title>DBLogin</title>
-	<link rel="stylesheet" href="./stylesheethome.css">
-</head>
-<body  style="background-color: #FDC4C4">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+    	<br>
 
 	<table cellspacing="0" cellpadding="0" width=100% height=auto>
-	<tr>
-		<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>
-		<td><b  style = "color: #FEFBFB; font-size: 50px;" class="logo">ATN M Toys</b></td>
-		<td><input type="text"  placeholder="Search..." name="search" class="search-box"></td>
-		<td><b><a href="Login.php">LOGIN</a></b></td>
-		<td><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"></td>
-	</tr>
-	</table>
+<tr>
+	<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>
+	<td><b  style = "color: #FEFBFB; font-size: 50px;" class="logo">ATN M Toys</b></td>
+	<td><input type="text"  placeholder="Search..." name="search" class="search-box"></td>
+	<td><b><a href="Login.php">LOGIN</a></b></td>
+	<td><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"></td>
+</tr>
+</table>
 
-	<table cellspacing="10" cellpadding="0" width=100% height=auto>
-			<tr>
-				<td><div class="header">
-				<ul>
-					
-					<li><b><a href="Assignment2(home).php">HOME</a></b></li>
-					<li><b><a href="Allproduct.php">SHOP</a></b></li>
-				</ul>
-				</div>
-				</td>
-			</tr>
-	</table>
-
-        <tr>
-			<td align="center" colspan="2" style=""><h1>Add New PRODUCT</h1></td>
-		</tr><br/><br>
+<table cellspacing="10" cellpadding="0" width=100% height=auto>
 		<tr>
-			<td>ToyName</td>
-			<td><input type = "text" name = "" id = "toyname"></td>
-		</tr><br>
-		<tr>
-			<td>Image</td>
-			<td><input type = "text" name = "" id = "image"></td>
-		</tr><br>
-		<tr>
-			<td>Price</td>
-			<td><input type = "text" name = "" id = "price"></td>
-		</tr><br>
-		<tr>
-			<td>CatID</td>
-			<td>
-				<select id = "catid">
-					<option value = "1">1</option>
-					<option value = "2">2</option>
-					<option value = "3">3</option>
-				</select>
+			<td><div class="header">
+			<ul>
+				
+				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
+				
+				<li><b><a href="Allproduct.php">SHOP</a></b></li>
+				
+			</ul>
+			</div>
 			</td>
-		</tr><br>
-		<tr>
-			<td><input type = "button" id = "btnAdd" value = "Add"></td>
-		</tr><br/><br>
-
-	
-	
-		
-
-
-	
-	Name to search
-	<input type = "text" name = "" id = "nameSearch">
-	<input type = "button" value = "Search" id = "btnSearch">
-	<table width = "300px" id = "userList" border = "1">
-		<thead>
-		<tr>
-			<th>ToyID</th>
-			<th>ToyName</th>
-			<th>Image</th>
-			<th>Price</th>
-			<th>CatID</th>
 		</tr>
-		</thead>
-		<tbody></tbody>
+</table>
 
-	</table>
+	<br> 
+    	<?php
+require_once './index.php';
+if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $_POST['catid']))
+{
+    $image = "";
+    $extension = "";
+    
+    if (isset($_FILES['image']) && $_FILES['image']['size'] != 0) {
+        $temp_name = $_FILES['image']['tmp_name'];
+        $name = $_FILES['image']['name'];
+        $parts = explode(".", $name);
+        $lastIndex = count($parts) - 1;
+        $extension = $parts[$lastIndex];
+        $iimage = "$toyid.$extension";
+        $destination = "./images/item/$image";
+        //Move the file from temp loc => to our image folder
+        move_uploaded_file($temp_name, $destination);
+    }
+    
+   
+    
+        
+    // mysql query to insert data
+    $sql = "INSERT INTO Toyproduct (toyid, toyname, image, price, catid ) 
+                    values (:toyid, :toyname, :image, :price, :catid)";
+    
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':toyid', $_POST['toyid'], PDO::PARAM_STR);
+    $stmt->bindValue(':toyname', $_POST['toyname'], PDO::PARAM_STR);
+    $stmt->bindValue(':image', $_POST['image'], PDO::PARAM_STR);
+    $stmt->bindValue(':price', $_POST['price'], PDO::PARAM_STR);
+    $stmt->bindValue(':catid', $_POST['catid'], PDO::PARAM_STR);
+  
+   
+    $pdoExec = $stmt->execute();
+    
+        // check if mysql insert query successful
+    if($pdoExec)
+    {
+        echo 'Data Inserted';
+    }else{
+        echo 'Data Not Inserted';
+    }
+}
+?> 
 
-	<script type = "text/javascript">
-		//List store all names which have been entered
-		var toynameList = [];
-		$(document).ready(function()
-		{
-			$("#btnAdd").click(function(event) {
-				var toyid = $("#toyid").val();
-				var toyname = $("#toyname").val();
-				var image = $("#image").val();
-				var price = $("#price").val();
-				var catid = $("#catid").val();
-				var row = "<tr>" + "<td>" + toyid + "</td>" + "<td>" + toyname + "</td>" "<td>" + image + "</td>" +"<td>" + price + "</td>" +"<td>" + catid + "</td>" + + "</tr>";
-				$("#userList tbody").append(row);
-				toynameList.push(toyname); //add new name to the List
-			});
-			//perform search
-			$("#btnSearch").click(function(event) {
-				var toyname = $("#toynameSearch").val();
-				var found = false;
-				for (var i = 0; i < toynameList.length; i++) {
-					if (toynameList[i] == toyname)
-					{
-						found = true;
-						break;
-					}
-				}
-				if(found)
-				{
-					alert("Found " + toyname);
-				}
-				else
-				{
-					alert("Not found " + toyname);
-				}
-			});
-		});
-	</script>
+        <form action="DBLogin.php" method="post">
+
+            <input type="text" name="toyid" required placeholder="Toyid"><br><br>
+
+            <input type="text" name="toyname" required placeholder="ToyName"><br><br>
+
+            <input type="text" name="image" required placeholder="Image"><br><br>
+
+            <input type="number" name="price" required placeholder="Price"><br><br>
+
+             <input type="number" name="catid" required placeholder="CatId"><br><br>
 
 
 
+            <input type="submit" value="Insert Data">
 
-</body>
+        </form>
+
+    </body>
+
 </html>

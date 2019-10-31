@@ -105,6 +105,13 @@
             </script>
         </table>        
     </div> 
+	
+	<table>
+	    <tr>
+	    	<td align="center" colspan="2"><b><a href="DBLogin.php"><input type ="button" id = "addnewproduct" value="Add New Product"></a></b>
+			</td>
+		</tr>
+	</table>
 
 </body>
 </html>

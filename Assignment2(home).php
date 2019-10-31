@@ -6,9 +6,7 @@
 	<link rel="stylesheet" href="./stylesheethome.css">
 </head>
 <body  style="background-color: #FDC4C4">
-<style>
-		
- </style>
+
 <table cellspacing="0" cellpadding="0" width=100% height=auto>
 <tr>
 	<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>

@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<title>Admin</title>
-	<link rel="stylesheet" href="./Stylesheethome.css">
-
-	
-		
+	<link rel="stylesheet" href="./stylesheethome.css">
 </head>
 <body  style="background-color: #FDC4C4">
 	
@@ -24,7 +22,7 @@
 			<ul>
 				
 				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
-				
+
 				<li><b><a href="Allproduct.php">SHOP</a></b></li>
 				
 			</ul>
@@ -33,9 +31,8 @@
 		</tr>
 	</table>
 
-	
-	
-		<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
+
+	<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
 			<tr>
 				<th>Id</th>
 				<th>Name</th>

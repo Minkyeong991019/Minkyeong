@@ -30,30 +30,27 @@
 			</td>
 		</tr>
 </table>
-<div class="third">
-<?php
-$sql = "SELECT * FROM Toyproduct";
-$stmt = $pdo->prepare($sql);
-//execute the query on the server and return the result set
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$stmt->execute();
-$resultSet = $stmt->fetchAll();
-//display the data
-?>
 
-	<ul>
-	<?php
-		foreach ($resultSet as $row) {
-			echo "<li>" .
-				$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
-			. "</li>";
-		}
-	?>
-</ul>
+				<?php
+				$sql = "SELECT * FROM Toyproduct";
+				$stmt = $pdo->prepare($sql);
+				//execute the query on the server and return the result set
+				$stmt->setFetchMode(PDO::FETCH_ASSOC);
+				$stmt->execute();
+				$resultSet = $stmt->fetchAll();
+				//display the data
+				?>
 
-	</div>
-</div>
-</div>
+				<ul>
+				<?php
+					foreach ($resultSet as $row) {
+						echo "<li>" .
+							$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
+						. "</li>";
+					}
+				?>
+			</ul>
 
+				</div>
 </body>
 </html>

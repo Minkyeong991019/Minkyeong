@@ -65,19 +65,19 @@
 	<tr align="center">
 		<td>ToyID</td>
 		<td><input type = "text" name = "" id = "toyid"></td>
-	</tr>
+	</tr><br>
 	<tr align="center">
 		<td>ToyName</td>
 		<td><input type = "text" name = "" id = "toyname"></td>
-	</tr>
+	</tr><br>
 	<tr align="center">
 		<td>Image</td>
 		<td><input type = "text" name = "" id = "image"></td>
-	</tr>
+	</tr><br>
 	<tr align="center">
 		<td>Price</td>
 		<td><input type = "text" name = "" id = "price"></td>
-	</tr>
+	</tr><br>
 	<tr align="center">
 		<td>CatID</td>
 		<td>
@@ -87,7 +87,7 @@
 				<option value = "3">3</option>
 			</select>
 		</td>
-	</tr>
+	</tr><br>
 
 	<input type = "button" id = "btnAdd" value = "Add">
 	<br/><br>

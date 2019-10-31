@@ -30,7 +30,8 @@
 			</td>
 		</tr>
 </table>
-	<div class="third">
+
+
 		 <form method="POST" action="login.php" >
         <table style="margin-left: 37%;" height="300" >
         	<tr>
@@ -52,11 +53,7 @@
 	</tr>
         </table>
     </form>
-		</div>
-	</div>
-		</div>
-		
-		
+
 
 </body>
 </html>

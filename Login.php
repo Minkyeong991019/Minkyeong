@@ -31,7 +31,6 @@
 		</tr>
 </table>
 
-
 		 <form method="POST" action="login.php" >
         <table style="margin-left: 37%;" height="300" >
         	<tr>

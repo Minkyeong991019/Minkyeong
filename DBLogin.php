@@ -56,7 +56,7 @@
 				</td>
 			</tr>
 	</table>
-	<table style="margin-left: 45%;">
+	<table style="margin-left: 45%; margin-top: 0%" width=40%>
         	<tr>
 				<td align="center" colspan="2" style=""><h1>Add New PRODUCT</h1></td>
 			</tr><br/><br>

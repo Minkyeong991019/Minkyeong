@@ -41,24 +41,13 @@
 				//display the data 
 			?>
 			<ul>
-				<?php
-					foreach ($resultSet as $row $i=0; $i<count($pros); $i++) 
-					{
-						?>
-						<div class = "product">
-						<div class = "name"> <?=$pros[$i][1]?></div>
-						<div class = "image">
-							<a href = "">
-								<img src = "<?=$pros[$i][2]?>" alt = "" width = "100%" height = "100%">
-							</a>
-						</div>
-						<div class = "price"> <?=$pros[$i][3]?></div>
-					</div>
-
-				<?php
-				}
-				?>
-				
-			</ul>
+	<?php
+		foreach ($resultSet as $row) {
+			echo "<li>" .
+				$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
+			. "</li>";
+		}
+	?>
+</ul>
 	</body>
 </html>

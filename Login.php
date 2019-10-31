@@ -46,15 +46,13 @@
 		<td width="250"><input type="password" name="password"><br></td>
 	</tr>
 	<tr>
-    	<td align="center" colspan="2"><b><input type ="button" vlaue="Login"></b>
+    	<td align="center" colspan="2"><b><input type ="button" vlaue="Login"><a href="DBLogin.php">Login</a></b>
 
 		</td>
 	</tr>
         </table>
     </form>
 
-
-     <a href="min99.php">min99</a>
 
 </body>
 </html>

@@ -42,7 +42,7 @@
 			?>
 			<ul>
 				<?php
-					foreach ($i=0; $i<count($pros); $i++) 
+					foreach ($resultSet as $row $i=0; $i<count($pros); $i++) 
 					{
 						?>
 						<div class = "product">
@@ -53,11 +53,11 @@
 							</a>
 						</div>
 						<div class = "price"> <?=$pros[$i][3]?></div>
-						</div>
+					</div>
 
-					<?php
-					}
-					?>
+				<?php
+				}
+				?>
 				
 			</ul>
 	</body>

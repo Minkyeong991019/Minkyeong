@@ -56,14 +56,11 @@
 				</td>
 			</tr>
 	</table>
-	<table style="margin-left: 45%;">
+	<table style="margin-left: 45%;" width="1000" height="500">
         	<tr>
-				<td align="center" colspan="2" style="height: 100px;"><h1>PRODUCT</h1></td>
-			</tr>
-	</table>
-	
-	<table width="1000" height="500" style="margin-left: 25%;" >
-		<tr>
+				<td align="center" colspan="2" style="height: 100px;"><h1>Add New PRODUCT</h1></td>
+			</tr><br/><br>
+			<tr>
 			<td colspan="2" align="center"><h1 style="font-size: 30px;">Add new Product</h1></td>
 		</tr><br>
 		<tr align="center">
@@ -92,6 +89,10 @@
 			<td><input type = "button" id = "btnAdd" value = "Add"></td>
 		</tr><br/><br>
 	</table>
+	
+	
+		
+
 
 	
 	Name to search

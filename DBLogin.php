@@ -26,13 +26,18 @@
 				
 				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
 				<li><b><a href="Allproduct.php">SHOP</a></b></li>
-				<li><b><a href="AddProduct.php">Product</a></b></li>
-				
 			</ul>
 			</div>
 			</td>
 		</tr>
 </table>
+<table style="margin-left: 37%;" height="300" >
+        	<tr>
+				<td align="center" colspan="2"><h1>LOGIN</h1></td>
+
+			</tr>
+
+
 
 
 

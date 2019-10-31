@@ -56,13 +56,10 @@
 				</td>
 			</tr>
 	</table>
-	<table style="margin-left: 45%;" width="1000" height="500">
+	<table style="margin-left: 45%;">
         	<tr>
 				<td align="center" colspan="2" style="height: 100px;"><h1>Add New PRODUCT</h1></td>
 			</tr><br/><br>
-			<tr>
-			<td colspan="2" align="center"><h1 style="font-size: 30px;">Add new Product</h1></td>
-		</tr><br>
 		<tr align="center">
 			<td>ToyName</td>
 			<td><input type = "text" name = "" id = "toyname"></td>

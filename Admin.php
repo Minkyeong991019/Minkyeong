@@ -5,9 +5,7 @@
 	<link rel="stylesheet" href="./stylesheethome.css">
 </head>
 <body  style="background-color: #FDC4C4">
-	<?php
-	require_once ("./index.php");
-	?>
+	
 	
 	<br>
 	<<table cellspacing="0" cellpadding="0" width=100% height=auto>

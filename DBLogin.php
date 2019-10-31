@@ -58,7 +58,7 @@
 	</table>
 	<table style="margin-left: 45%;">
         	<tr>
-				<td align="center" colspan="2" style="height: 100px;"><h1>Add New PRODUCT</h1></td>
+				<td align="center" colspan="2" style=""><h1>Add New PRODUCT</h1></td>
 			</tr><br/><br>
 		<tr align="center">
 			<td>ToyName</td>

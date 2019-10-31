@@ -56,7 +56,7 @@
 				</td>
 			</tr>
 	</table>
-	<table style="margin-left: 45%;" align="center">
+
         <tr>
 			<td align="center" colspan="2" style=""><h1>Add New PRODUCT</h1></td>
 		</tr><br/><br>
@@ -85,7 +85,7 @@
 		<tr>
 			<td><input type = "button" id = "btnAdd" value = "Add"></td>
 		</tr><br/><br>
-	</table>
+
 	
 	
 		

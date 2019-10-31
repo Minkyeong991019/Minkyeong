@@ -32,7 +32,7 @@
 </table>
 
 		 <form method="POST" action="login.php" >
-        <table style="margin-left: 37%;" height="300" >
+        <table style="margin-left: 37%;" height="300px" >
         	<tr>
 				<td align="center" colspan="2"><h1>LOGIN</h1></td>
 

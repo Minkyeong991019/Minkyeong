@@ -22,7 +22,7 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 	//your sql query
-	$sql = "SELECT * FROM product";
+	$sql = "SELECT * FROM toyproduct";
 	$stmt = $pdo->prepare($sql);
 	//execute the query on the server and return the result set
 	$stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -34,7 +34,7 @@ $pdo = new PDO("pgsql:" . sprintf(
 	<?php
 		foreach ($resultSet as $row) {
 			echo "<li>" .
-				$row["productid"] . '--'. $row["productname"] . '--'. $row["price"]
+				$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
 			. "</li>";
 		}
 	?>

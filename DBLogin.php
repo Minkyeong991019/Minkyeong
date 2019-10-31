@@ -62,17 +62,28 @@
 			</tr>
 	</table>
 	
-	Name
-	<input type = "text" name = "" id = "name">
+	<p align="center">ToyID</p>
+	<input type = "text" name = "" id = "toyid" align="center">
 	<br/><br>
-	Country <select id = "country">
-		<option value = "VN">VN</option>
-		<option value = "Indo">Indo</option>
-		<option value = "Malay">Malay</option>
-		<option value = "Korea">Korea</option>
+	<p align="center">ToyName</p>
+	<input type = "text" name = "" id = "toyname" align="center">
+	<br/><br>
+	<p align="center">Image</p>
+	<input type = "text" name = "" id = "image" align="center">
+	<br/><br>
+	<p align="center">Price</p>
+	<input type = "text" name = "" id = "price" align="center">
+	<br/><br>
+	<p align="center">CatID</p>
+	<select id = "catid">
+		<option value = "1">1</option>
+		<option value = "2">2</option>
+		<option value = "3">3</option>
+		<option value = "4">4</option>
 	</select>
 	<br/><br>
-	<input type = "button" id = "btnRegister" value = "Register">
+
+	<input type = "button" id = "btnAdd" value = "Add">
 	<br/><br>
 	Name to search
 	<input type = "text" name = "" id = "nameSearch">
@@ -80,13 +91,54 @@
 	<table width = "300px" id = "userList" border = "1">
 		<thead>
 		<tr>
-			<th>Name</th>
-			<th>Country</th>
+			<th>ToyID</th>
+			<th>ToyName</th>
+			<th>Image</th>
+			<th>Price</th>
+			<th>CatID</th>
 		</tr>
 		</thead>
 		<tbody></tbody>
 
 	</table>
+
+	<script type = "text/javascript">
+		//List store all names which have been entered
+		var toynameList = [];
+		$(document).ready(function()
+		{
+			$("#btnAdd").click(function(event) {
+				var toyid = $("#toyid").val();
+				var toyname = $("#toyname").val();
+				var image = $("#image").val();
+				var price = $("#price").val();
+				var catid = $("#catid").val();
+				var row = "<tr>" + "<td>" + toyid + "</td>" + "<td>" + toyname + "</td>" "<td>" + image + "</td>" +"<td>" + price + "</td>" +"<td>" + catid + "</td>" + + "</tr>";
+				$("#userList tbody").append(row);
+				toynameList.push(toyname); //add new name to the List
+			});
+			//perform search
+			$("#btnSearch").click(function(event) {
+				var toyname = $("#toynameSearch").val();
+				var found = false;
+				for (var i = 0; i < toynameList.length; i++) {
+					if (toynameList[i] == toyname)
+					{
+						found = true;
+						break;
+					}
+				}
+				if(found)
+				{
+					alert("Found " + toyname);
+				}
+				else
+				{
+					alert("Not found " + toyname);
+				}
+			});
+		});
+	</script>
 
 
 

@@ -32,7 +32,7 @@
 </table>
 
 			<?php
-				$sql = "SELECT * FROM toyproduct";
+				$sql = "SELECT * toyid, image, price FROM toyproduct";
 				$stmt = $pdo->prepare($sql);
 				//execute the query on the server and return the result set
 				$stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -42,12 +42,23 @@
 			?>
 			<ul>
 				<?php
-					foreach ($resultSet as $row) {
-						echo "<li>" .
-							$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
-						. "</li>";
+					foreach ($i=0; $i<count($pros); $i++) 
+					{
+						?>
+						<div class = "product">
+						<div class = "name"> <?=$pros[$i][1]?></div>
+						<div class = "image">
+							<a href = "">
+								<img src = "<?=$pros[$i][2]?>" alt = "" width = "100%" height = "100%">
+							</a>
+						</div>
+						<div class = "price"> <?=$pros[$i][3]?></div>
+						</div>
+
+					<?php
 					}
-				?>
+					?>
+				
 			</ul>
 	</body>
 </html>

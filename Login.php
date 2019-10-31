@@ -46,24 +46,15 @@
 		<td width="250"><input type="password" name="password"><br></td>
 	</tr>
 	<tr>
-    	<td align="center" colspan="2"><b><input type ="submit" value="Log In"></b><a href="DBLogin.php"></a>
+    	<td align="center" colspan="2"><b><input type ="button" vlaue="Login"></b>
 
 		</td>
 	</tr>
         </table>
     </form>
 
-    <?php
-    require('DBLogin.php');
-    if (isset($_POST['username']) and isset($_POST['password'])){
-	
-// Assigning POST values to variables.
-$username = $_POST['username'];
-$password = $_POST['password'];
 
-// CHECK FOR THE RECORD FROM TABLE
-    ?>
-
+     <a href="min99.php">min99</a>
 
 </body>
 </html>

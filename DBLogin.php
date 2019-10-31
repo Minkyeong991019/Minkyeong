@@ -56,23 +56,23 @@
 				</td>
 			</tr>
 	</table>
-	<table style="margin-left: 45%; margin-top: 0%" width=40%>
-        	<tr>
-				<td align="center" colspan="2" style=""><h1>Add New PRODUCT</h1></td>
-			</tr><br/><br>
-		<tr align="center">
+	<table style="margin-left: 45%;" align="center">
+        <tr>
+			<td align="center" colspan="2" style=""><h1>Add New PRODUCT</h1></td>
+		</tr><br/><br>
+		<tr>
 			<td>ToyName</td>
 			<td><input type = "text" name = "" id = "toyname"></td>
 		</tr><br>
-		<tr align="center">
+		<tr>
 			<td>Image</td>
 			<td><input type = "text" name = "" id = "image"></td>
 		</tr><br>
-		<tr align="center">
+		<tr>
 			<td>Price</td>
 			<td><input type = "text" name = "" id = "price"></td>
 		</tr><br>
-		<tr align="center">
+		<tr>
 			<td>CatID</td>
 			<td>
 				<select id = "catid">

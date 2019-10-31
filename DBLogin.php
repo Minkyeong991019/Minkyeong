@@ -29,7 +29,7 @@
 				</td>
 			</tr>
 	</table>
-	<table style="margin-left: 40%;" height="200" >
+	<table style="margin-left: 45%;" height="200" >
         	<tr>
 				<td align="center" colspan="2"><h1>PRODUCT</h1></td>
 			</tr>

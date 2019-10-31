@@ -29,9 +29,9 @@
 				</td>
 			</tr>
 	</table>
-	<table style="margin-left: 45%;" height="50" border="1px solid black">
+	<table style="margin-left: 45%; height: 110px" border="1px solid black">
         	<tr>
-				<td align="center" colspan="2" height="50px"><h1>PRODUCT</h1></td>
+				<td align="center" colspan="2" style="height: 100px;"><h1>PRODUCT</h1></td>
 			</tr>
 	</table>
 

@@ -62,35 +62,38 @@
 			</tr>
 	</table>
 	
-	<tr align="center">
-		<td>ToyID</td>
-		<td><input type = "text" name = "" id = "toyid"></td>
-	</tr><br>
-	<tr align="center">
-		<td>ToyName</td>
-		<td><input type = "text" name = "" id = "toyname"></td>
-	</tr><br>
-	<tr align="center">
-		<td>Image</td>
-		<td><input type = "text" name = "" id = "image"></td>
-	</tr><br>
-	<tr align="center">
-		<td>Price</td>
-		<td><input type = "text" name = "" id = "price"></td>
-	</tr><br>
-	<tr align="center">
-		<td>CatID</td>
-		<td>
-			<select id = "catid">
-				<option value = "1">1</option>
-				<option value = "2">2</option>
-				<option value = "3">3</option>
-			</select>
-		</td>
-	</tr><br>
+	<table width="1000" height="500" style="margin-left: 25%;" >
+		<tr>
+			<td colspan="2" align="center"><h1 style="font-size: 30px;">Add new Product</h1></td>
+		</tr><br>
+		<tr align="center">
+			<td>ToyName</td>
+			<td><input type = "text" name = "" id = "toyname"></td>
+		</tr><br>
+		<tr align="center">
+			<td>Image</td>
+			<td><input type = "text" name = "" id = "image"></td>
+		</tr><br>
+		<tr align="center">
+			<td>Price</td>
+			<td><input type = "text" name = "" id = "price"></td>
+		</tr><br>
+		<tr align="center">
+			<td>CatID</td>
+			<td>
+				<select id = "catid">
+					<option value = "1">1</option>
+					<option value = "2">2</option>
+					<option value = "3">3</option>
+				</select>
+			</td>
+		</tr><br>
+		<tr>
+			<td><input type = "button" id = "btnAdd" value = "Add"></td>
+		</tr><br/><br>
+	</table>
 
-	<input type = "button" id = "btnAdd" value = "Add">
-	<br/><br>
+	
 	Name to search
 	<input type = "text" name = "" id = "nameSearch">
 	<input type = "button" value = "Search" id = "btnSearch">

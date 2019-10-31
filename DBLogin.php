@@ -25,8 +25,8 @@
 			<ul>
 				
 				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
-				<li><b><a href="AddProduct.php">Product</a></b></li>
 				<li><b><a href="Allproduct.php">SHOP</a></b></li>
+				<li><b><a href="AddProduct.php">Product</a></b></li>
 				
 			</ul>
 			</div>

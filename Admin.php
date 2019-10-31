@@ -8,11 +8,7 @@
 		
 </head>
 <body  style="background-color: #FDC4C4">
-	<?php
-	require_once ("./index.php");
-	?>
 	
-	<br>
 	<table cellspacing="0" cellpadding="0" width=100% height=auto>
 		<tr>
 			<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>
@@ -22,7 +18,21 @@
 			<td><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"></td>
 		</tr>
 	</table>
-	
+	<table cellspacing="10" cellpadding="0" width=100% height=auto>
+		<tr>
+			<td><div class="header">
+			<ul>
+				
+				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
+				
+				<li><b><a href="Allproduct.php">SHOP</a></b></li>
+				
+			</ul>
+			</div>
+			</td>
+		</tr>
+	</table>
+
 	
 	
 		<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">

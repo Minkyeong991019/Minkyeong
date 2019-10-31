@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
 	<title>Admin</title>
 	<link rel="stylesheet" href="./stylesheethome.css">
 </head>
 <body  style="background-color: #FDC4C4">
-
-<table cellspacing="0" cellpadding="0" width=100% height=auto>
+	<?php
+	require_once ("./index.php");
+	?>
+	
+	<br>
+	<<table cellspacing="0" cellpadding="0" width=100% height=auto>
 <tr>
 	<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>
 	<td><b  style = "color: #FEFBFB; font-size: 50px;" class="logo">ATN M Toys</b></td>
@@ -31,8 +34,10 @@
 			</td>
 		</tr>
 </table>
+	<br> 
 	
-	<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
+	
+		<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
 			<tr>
 				<th>Id</th>
 				<th>Name</th>
@@ -100,5 +105,6 @@
             </script>
         </table>        
     </div> 
+
 </body>
 </html>

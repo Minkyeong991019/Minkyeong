@@ -31,7 +31,7 @@
 	</table>
 	<table style="margin-left: 45%;" height="50" border="1px solid black">
         	<tr>
-				<td align="center" colspan="2"><h1>PRODUCT</h1></td>
+				<td align="center" colspan="2" height="50px"><h1>PRODUCT</h1></td>
 			</tr>
 	</table>
 

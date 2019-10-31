@@ -53,6 +53,17 @@
         </table>
     </form>
 
+    <?php
+    require('DBLogin.php');
+    if (isset($_POST['username']) and isset($_POST['password'])){
+	
+// Assigning POST values to variables.
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+// CHECK FOR THE RECORD FROM TABLE
+    ?>
+
 
 </body>
 </html>

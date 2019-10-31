@@ -53,6 +53,37 @@
         </table>
     </form>
 
+    <?php  
+		 require('DBLogin.php');
+
+		if (isset($_POST['username']) and isset($_POST['password'])){
+			
+			// Assigning POST values to variables.
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+
+			// CHECK FOR THE RECORD FROM TABLE
+			$query = "SELECT * FROM `account` WHERE username='$username' and password='$password'";
+			 
+			$result = pg_query($connection, $query) or die(pg_error($connection));
+			$count = pg_num_rows($result);
+
+			if ($count == 1){
+
+			//echo "login successfull will move to admin page with function are add and delete
+			echo '<script>window.location="Admin(asm).php"</script>';
+
+			}
+
+
+
+			else{
+			echo "<script type='text/javascript'>alert('Invalid Login Credentials')</script>";
+			//echo "Invalid Login Credentials";
+			}
+		}
+	?>
+
 
 </body>
 </html>

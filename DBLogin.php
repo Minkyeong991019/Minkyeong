@@ -62,26 +62,32 @@
 			</tr>
 	</table>
 	
-	<p align="center">ToyID</p>
-	<input type = "text" name = "" id = "toyid" align="center">
-	<br/><br>
-	<p align="center">ToyName</p>
-	<input type = "text" name = "" id = "toyname" align="center">
-	<br/><br>
-	<p align="center">Image</p>
-	<input type = "text" name = "" id = "image" align="center">
-	<br/><br>
-	<p align="center">Price</p>
-	<input type = "text" name = "" id = "price" align="center">
-	<br/><br>
-	<p align="center">CatID</p>
-	<select id = "catid">
-		<option value = "1">1</option>
-		<option value = "2">2</option>
-		<option value = "3">3</option>
-		<option value = "4">4</option>
-	</select>
-	<br/><br>
+	<tr align="center">
+		<td>ToyID</td>
+		<td><input type = "text" name = "" id = "toyid"></td>
+	</tr>
+	<tr align="center">
+		<td>ToyName</td>
+		<td><input type = "text" name = "" id = "toyname"></td>
+	</tr>
+	<tr align="center">
+		<td>Image</td>
+		<td><input type = "text" name = "" id = "image"></td>
+	</tr>
+	<tr align="center">
+		<td>Price</td>
+		<td><input type = "text" name = "" id = "price"></td>
+	</tr>
+	<tr align="center">
+		<td>CatID</td>
+		<td>
+			<select id = "catid">
+				<option value = "1">1</option>
+				<option value = "2">2</option>
+				<option value = "3">3</option>
+			</select>
+		</td>
+	</tr>
 
 	<input type = "button" id = "btnAdd" value = "Add">
 	<br/><br>

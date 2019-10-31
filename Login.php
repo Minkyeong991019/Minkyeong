@@ -4,13 +4,12 @@
 	<title>HOME</title>
 	<link rel="stylesheet" href="./stylesheethome.css">
 </head>
-<body  style="background-color: #C1CDC1">
-<style>
-		
- </style>
+<body  style="background-color: #FDC4C4">
+
 <table cellspacing="0" cellpadding="0" width=100% height=auto>
 <tr>
 	<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>
+	<td><b  href="" class="logo">ATN M Toys</b></td>
 	<td><input type="text"  placeholder="Search..." name="search" class="search-box"></td>
 	<td><b><a href="Login.php">LOGIN</a></b></td>
 	<td><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"></td>
@@ -24,7 +23,7 @@
 				
 				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
 				
-				<li><b><a href="AllProduct.php">SHOP</a></b></li>
+				<li><b><a href="Allproduct.php">SHOP</a></b></li>
 				
 			</ul>
 			</div>
@@ -47,7 +46,7 @@
 		<td width="250"><input type="password" name="password"><br></td>
 	</tr>
 	<tr>
-    	<td align="center" colspan="2"><b><input type ="submit" value="Log In"></b>
+    	<td align="center" colspan="2"><b><input type ="submit" value="Log In"></b><a href="DBLogin.php"></a>
 
 		</td>
 	</tr>
@@ -55,3 +54,44 @@
     </form>
 		</div>
 	</div>
+		</div>
+		
+		<?php
+
+		$error = "";
+
+		$conn = pg_connect("host=localhost dbname=brittains_db user=brittains password=XXXXXX" );
+
+		$sql = "SELECT * FROM acount";
+		$result = pg_query($conn, $sql);
+
+		if($_SERVER["REQUEST_METHOD"] == "GET") {
+		    $userName="";
+		    $password="";
+		}
+
+		else if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+		    $userName=trim($_POST["userNameLogin"]);
+		    $password=trim($_POST["passwordLogin"]);
+
+		    if(pg_fetch_result($results, $userName, "userName")==true 
+		       && pg_fetch_result($results, $password, "userName")==true) {
+		        setcookie("userIDforDV", $userName, time()+43200);
+		    }
+		    else {
+		        $error = "Your username and or password is incorrect";
+		    }
+
+		}
+
+		$userName = $_COOKIE['userIDforDV'];
+
+		if(isset($userName) && $userName!="") {
+		    echo "Welcome " . $userName;
+		}
+
+		echo $error;
+
+</body>
+</html>

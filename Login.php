@@ -46,7 +46,7 @@
 		<td width="250"><input type="password" name="password"><br></td>
 	</tr>
 	<tr>
-    	<td align="center" colspan="2"><b><a href="DBLogin.php"><input type ="button" id = "login" value="Log In"></a></b>
+    	<td align="center" colspan="2"><b><a href="Admin.php"><input type ="button" id = "login" value="Log In"></a></b>
 
 		</td>
 	</tr>

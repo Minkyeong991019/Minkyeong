@@ -34,11 +34,27 @@
 				<?php
 				$sql = "SELECT * FROM Toyproduct";
 				$stmt = $pdo->prepare($sql);
+				for ($i=0; $i<count($pros); $i++)
+				{
 				//execute the query on the server and return the result set
 				$stmt->setFetchMode(PDO::FETCH_ASSOC);
 				$stmt->execute();
 				$resultSet = $stmt->fetchAll();
 				//display the data
+				?>
+
+				<div class = "product">
+				<div class = "name"> <?=$pros[$i][1]?></div>
+				<div class = "image">
+					<a href = "">
+						<img src = "<?=$pros[$i][2]?>" alt = "" width = "100%" height = "100%">
+					</a>
+				</div>
+				<div class = "price"> <?=$pros[$i][3]?></div>
+				</div>
+
+				<?php
+				}
 				?>
 
 				<ul>

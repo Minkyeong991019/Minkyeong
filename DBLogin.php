@@ -35,11 +35,6 @@
 			</tr>
 	</table>
 
-	<?php  
-		 require('DBLogin.php');
-
-	?>
-
 
 
 

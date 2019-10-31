@@ -25,7 +25,7 @@
 			<ul>
 				
 				<li><b><a href="Assignment2(home).php">HOME</a></b></li>
-				
+				<li><b><a href="AddProduct.php">Product</a></b></li>
 				<li><b><a href="Allproduct.php">SHOP</a></b></li>
 				
 			</ul>
@@ -34,18 +34,6 @@
 		</tr>
 </table>
 
-<table cellspacing="10" cellpadding="0" width=100% height=auto>
-		<tr>
-			<td><div class="header">
-			<ul>
-				
-				<li><b><a href="AddProduct.php">Product</a></b></li>
-				
-			</ul>
-			</div>
-			</td>
-		</tr>
-</table>
 
 
 </body>

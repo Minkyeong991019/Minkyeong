@@ -53,7 +53,7 @@
         </table>
     </form>
 
-    
+    <a href="min99.php">min99</a>
 
 
 </body>

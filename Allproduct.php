@@ -32,34 +32,37 @@
 </table>
 
 			
-			<?php 
-				$name = $_POST["txtName"];
-				$price = $_POST["txtprice"];
-				
+			<?php
+				echo "Showing all rows from Postgres Database";
 				
 				//Refere to database 
-			   $db = parse_url(getenv("DATABASE_URL"));
-			   $pdo = new PDO("pgsql:" . sprintf(
-			        "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-			        $db["host"],
-			        $db["port"],
-			        $db["user"],
-			        $db["pass"],
-			        ltrim($db["path"], "/")
-			   ));
-			   $data = [
-				    'toyname' => $name,
-				    'price' => $price
-				];
-				$stmt =  $pdo->prepare("INSERT INTO product(toyname, price) VALUES (:toyname,:price)");	
-				$stmt->execute($data);
-			?>
-			 <h2>Thank you <?php echo $name?>  for submit Product 
+				$db = parse_url(getenv("DATABASE_URL"));
 
-			 </h2>
-			 <ul>
-			 	<li><?php echo $price?></li>
-			 </ul>
-			 <a href="DBLogin.php">Login</a>
+			$pdo = new PDO("pgsql:" . sprintf(
+			    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+			    $db["host"],
+			    $db["port"],
+			    $db["user"],
+			    $db["pass"],
+			    ltrim($db["path"], "/")
+			));
+				//your sql query
+				$sql = "SELECT * FROM toyproduct";
+				$stmt = $pdo->prepare($sql);
+				//execute the query on the server and return the result set
+				$stmt->setFetchMode(PDO::FETCH_ASSOC);
+				$stmt->execute();
+				$resultSet = $stmt->fetchAll();
+				//display the data 
+			?>
+			<ul>
+				<?php
+					foreach ($resultSet as $row) {
+						echo "<li>" .
+							$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
+						. "</li>";
+					}
+				?>
+			</ul>
 	</body>
 </html>

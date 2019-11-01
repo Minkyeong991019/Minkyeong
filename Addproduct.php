@@ -3,14 +3,10 @@
 <html>
 
     <head>
-    	<link rel="stylesheet" href="./styleecheethome.css">
-
-        <title>Add New Product </title>
-
-        <meta charset="UTF-8">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    	<title>Add New Product </title>
+    	<link rel="stylesheet" href="./stylesheethome.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
     	<br>
@@ -40,7 +36,6 @@
 			</tr>
 	</table>
 
-	<br> 
     	<?php
 require_once './index.php';
 if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $_POST['catid']))

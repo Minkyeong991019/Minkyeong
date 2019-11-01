@@ -104,6 +104,7 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
             <input type="submit" value="Insert Data">
 
         </form>
+        <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Admin.php">Back to product Admin</a></h2>
 
     </body>
 

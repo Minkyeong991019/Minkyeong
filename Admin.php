@@ -5,9 +5,7 @@
 	<link rel="stylesheet" href="./stylesheethome.css">
 </head>
 <body  style="background-color: #FDC4C4">
-	<?php
-	require_once ("./index.php");
-	?>
+	
 	
 	<br>
 	<<table cellspacing="0" cellpadding="0" width=100% height=auto>
@@ -109,7 +107,7 @@
 		
 	<table>
 	    <tr>
-	    	<td style="height: " align="center" colspan="2"><b><a href="DBLogin.php"><input type ="button" id = "addnewproduct" value="Add New Product"></a></b>
+	    	<td style="height: " align="center" colspan="2"><b><a href="DBLogin.php"><input id = "addnewproduct" value="Add New Product"></a></b>
 			</td>
 		</tr>
 	</table>

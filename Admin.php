@@ -44,7 +44,7 @@
 				<th>Image</th>
 				<th>Price</th>
 				<th>CatId</th>
-				<th colspan = "2">Option</th>
+				 <th colspan="2">Action</th>
 			</tr>
 			
 	
@@ -57,32 +57,36 @@
                 {
                     $Toyid = $row['toyid'];
                     $ToyName = $row['toyname'];
-                    $Image = $row['image'];
+                    $Image = $row['img'];
                     $Price = $row['price'];
                     $CatId = $row['catid'];
                    
-                    $link_image = "./images/$image";             
+                    $link_image = "./images/item/$iImage";             
                     echo "<tr>";
-                    echo "<td>$toyid</td>";                
+                    echo "<td>$Toyid</td>";                
             ?>
             <form action="updateitem.php" method="post">
 
-                <input type="hidden" name="toyid" value="<?php echo $row['toyid'] ?>" />
-                <td><input type="text" size="7" name="toyname" required value="<?php echo $row['toyname']; ?>"/></td>          
+                  <input type="hidden" name="toyid" value="<?php echo $row['toyid'] ?>" />
+                <td><input type="text" size="5" name="toyname" required value="<?php echo $row['toyname']; ?>"/></td>          
                 
                 
-                <td><input type="text" size="7" name="image" required value="<?php echo $row['image']; ?>"/></td>
+                <td><input type="text" size="5" name="image" required value="<?php echo $row['image']; ?>"/></td>
                 
-                <td><input type="text" size="7" name="price" required value="<?php echo $row['price']; ?>"/></td>
+                <td><input type="text" size="5" name="price" required value="<?php echo $row['price']; ?>"/></td>
                 
-                <td><input type="text" size="7" name="catid" required value="<?php echo $row['catid']; ?>"/></td>
+                <td><input type="text" size="5" name="catid" required value="<?php echo $row['catid']; ?>"/></td>
+                
             
-                <?php echo "<td ><img src='$link_image' width='200px'></td>"; ?>
+              
 
-                <td><input type="submit" value="Added" /></td>
+                <td><input type="submit" value="Edit" /></td>
             </form>    
                 <td>
-                    <form class="frminline" action="deleteitem.php" method="post" onsubmit="return confirmDelete();">
+    <?php
+		require_once ("./HeaderCloud.php");
+	?>
+                    <form class="frminline" action="DeleteCloud.php" method="post" onsubmit="return confirmDelete();">
                         <input type="hidden" name="toyid" value="<?php echo $row['toyid'] ?>" />
                         <input type="submit" value="Delete" />
                     </form>
@@ -104,8 +108,7 @@
                 }
             </script>
         </table>        
-    </div> 
-	
+    </div>
 	<table>
 	    <tr>
 	    	<td style="height: " align="center" colspan="2"><b><a href="DBLogin.php"><input type ="button" id = "addnewproduct" value="Add New Product"></a></b>

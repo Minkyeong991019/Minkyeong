@@ -35,9 +35,7 @@
 		</tr>
 </table>
 	<br> 
-	
-	
-		<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
+<table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
 			<tr>
 				<th>Id</th>
 				<th>Name</th>
@@ -83,9 +81,7 @@
                 <td><input type="submit" value="Edit" /></td>
             </form>    
                 <td>
-    <?php
-		require_once ("./HeaderCloud.php");
-	?>
+
                     <form class="frminline" action="DeleteCloud.php" method="post" onsubmit="return confirmDelete();">
                         <input type="hidden" name="toyid" value="<?php echo $row['toyid'] ?>" />
                         <input type="submit" value="Delete" />
@@ -108,7 +104,9 @@
                 }
             </script>
         </table>        
-    </div>
+    </div>	
+	
+		
 	<table>
 	    <tr>
 	    	<td style="height: " align="center" colspan="2"><b><a href="DBLogin.php"><input type ="button" id = "addnewproduct" value="Add New Product"></a></b>
@@ -118,3 +116,7 @@
 
 </body>
 </html>
+
+
+
+

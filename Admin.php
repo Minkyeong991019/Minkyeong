@@ -108,10 +108,7 @@
 	
 		
 	<table>
-	    <tr>
-	    	<td style="height: " align="center" colspan="2"><b><a href="DBLogin.php"><input id = "addnewproduct" value="Add New Product"></a></b>
-			</td>
-		</tr>
+	    <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Admin(asm).php">Back to product Admin</a></h2>
 	</table>
 
 </body>

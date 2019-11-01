@@ -30,15 +30,6 @@ $pdo = new PDO("pgsql:" . sprintf(
 	$resultSet = $stmt->fetchAll();
 	//display the data 
 ?>
-<ul>
-	<?php
-		foreach ($resultSet as $row) {
-			echo "<li>" .
-				$row["toyid"] . '--'. $row["toyname"] . '--'. $row["image"]. '--'. $row["price"]. '--'. $row["catid"]
-			. "</li>";
-		}
-	?>
-</ul>
 
 </body>
 </html>

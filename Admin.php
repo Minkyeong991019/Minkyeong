@@ -5,9 +5,7 @@
 	<link rel="stylesheet" href="./stylesheethome.css">
 </head>
 <body  style="background-color: #FDC4C4">
-	<?php
-	require_once ("./index.php");
-	?>
+	
 	
 	<br>
 	<<table cellspacing="0" cellpadding="0" width=100% height=auto>
@@ -35,6 +33,9 @@
 		</tr>
 </table>
 	<br> 
+	<?php
+	require_once ("./index.php");
+	?>
 <table border="2" cellspacing="1"  width="1000" height="1000" style="margin-left: 15%">
 			<tr>
 				<th>Id</th>

@@ -5,7 +5,6 @@
   </head>
 <body>
 
-<h1>Product Page</h1>
 
 <?php
 	echo "Showing all rows from Postgres Database";

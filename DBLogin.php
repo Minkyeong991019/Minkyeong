@@ -54,8 +54,8 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
         $parts = explode(".", $name);
         $lastIndex = count($parts) - 1;
         $extension = $parts[$lastIndex];
-        $iimage = "$toyid.$extension";
-        $destination = "./images/item/$image";
+        $image = "$toyid.$extension";
+        $destination = "./images/$image";
         //Move the file from temp loc => to our image folder
         move_uploaded_file($temp_name, $destination);
     }

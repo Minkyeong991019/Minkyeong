@@ -59,7 +59,7 @@
                     $Price = $row['price'];
                     $CatId = $row['catid'];
                    
-                    $link_image = "./images/item/$iImage";             
+                    $link_image = "./images/$Image";             
                     echo "<tr>";
                     echo "<td>$Toyid</td>";                
             ?>
@@ -69,7 +69,7 @@
                 <td><input type="text" size="5" name="toyname" required value="<?php echo $row['toyname']; ?>"/></td>          
                 
                 
-                <td><input type="text" size="5" name="image" required value="<?php echo $row['image']; ?>"/></td>
+              <?php echo "<td><img src='$link_imge' width='200px'></td>"; ?>
                 
                 <td><input type="text" size="5" name="price" required value="<?php echo $row['price']; ?>"/></td>
                 

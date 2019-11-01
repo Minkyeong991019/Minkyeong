@@ -55,7 +55,7 @@
                 {
                     $Toyid = $row['toyid'];
                     $ToyName = $row['toyname'];
-                    $Image = $row['img'];
+                    $Image = $row['image'];
                     $Price = $row['price'];
                     $CatId = $row['catid'];
                    
@@ -69,7 +69,7 @@
                 <td><input type="text" size="5" name="toyname" required value="<?php echo $row['toyname']; ?>"/></td>          
                 
                 
-              <?php echo "<td><img src='$link_imge' width='200px'></td>"; ?>
+              <?php echo "<td><img src='$link_image' width='200px'></td>"; ?>
                 
                 <td><input type="text" size="5" name="price" required value="<?php echo $row['price']; ?>"/></td>
                 

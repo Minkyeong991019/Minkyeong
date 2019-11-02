@@ -12,7 +12,7 @@
 	<td><img src="./Toy2.jpg" style="width: 100px; height: 100px;" style = "display: inline;" /></td>
 	<td><b  style = "color: #FEFBFB; font-size: 50px;" class="logo">ATN M Toys</b></td>
 	<td><input type="text"  placeholder="Search..." name="search" class="search-box"></td>
-	<td><b><a href="ADmin.php">Product</a></b></td>
+	<td><b><a href="ADmin.php">PRODUCT</a></b></td>
 	<td><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"></td>
 </tr>
 </table>

@@ -5,7 +5,7 @@
     	<meta charset="UTF-8">
     	<title>Add New Product </title>
     	<link rel="stylesheet" href="./stylesheethome.css">
-    	
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body  style="background-color: #FDC4C4">
@@ -96,7 +96,7 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
 
 
 
-            <input type="submit" value="Insert Data">
+            <input type="submit" value="Insert Data"><a href = "./Addproduct.php"></a>
 
         </form>
         <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Admin.php">Back to product Admin</a></h2>

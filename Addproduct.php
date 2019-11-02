@@ -105,7 +105,7 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
         </form>
 
         <table>
-		    <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Addproduct.php">Back to Admin Page</a></h2>
+		    <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Admin.php">Back to Admin Page</a></h2>
 		</table>
        
 

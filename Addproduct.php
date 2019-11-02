@@ -82,7 +82,7 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
 }
 ?> 
 
-        <form action="DBLogin.php" method="post">
+        <form action="Addproduct.php" method="post">
 
             <input type="text" name="toyid" required placeholder="Toyid"><br><br>
 

@@ -96,7 +96,7 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
 
 
 
-            <input type="submit" value="Insert Data">
+            <a href = "./Admin.php"><input type="submit" value="Insert Data"></a>
 
         </form>
        

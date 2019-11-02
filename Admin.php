@@ -109,7 +109,7 @@
 	
 		
 	<table>
-	    <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Addproduct.php">Back to product Admin</a></h2>
+	    <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Addproduct.php">Add New Product</a></h2>
 	</table>
 
 </body>

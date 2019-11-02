@@ -82,6 +82,10 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
 }
 ?> 
 
+		<table>
+		    <h2><a style="color: black; font-size: 20px; margin-left: 26%;">Add New Product</a></h2>
+		</table>
+
         <form action="Addproduct.php" method="post">
 
             <input type="text" name="toyid" required placeholder="Toyid"><br><br>
@@ -99,6 +103,10 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
             <input type = "submit" value = "Insert Data">
 
         </form>
+
+        <table>
+		    <h2><a style="color: black; font-size: 20px; margin-left: 26%;" href="./Addproduct.php">Add New Product</a></h2>
+		</table>
        
 
     </body>

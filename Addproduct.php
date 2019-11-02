@@ -83,7 +83,7 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
 ?> 
 
 		<table>
-		    <h2><a style="color: black; font-size: 20px; margin-left: 26%;">Add New Product</a></h2>
+		    <h2><a style="color: black; font-size: 20px;">Add New Product</a></h2>
 		</table>
 
         <form action="Addproduct.php" method="post">

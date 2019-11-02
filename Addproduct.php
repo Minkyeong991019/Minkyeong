@@ -94,9 +94,9 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
 
              <input type="number" name="catid" required placeholder="CatId"><br><br>
 
+			
 
-
-            <b><a href="Admin.php"><input type ="button" id = "insertdata" value="Insert Data"></a></b>
+            <h><a style="color: black; font-size: 20px; margin-left: 26%;" href="Admin.php"><input type ="button" id = "insertdata" value="Insert Data"></a></h>
 
         </form>
        

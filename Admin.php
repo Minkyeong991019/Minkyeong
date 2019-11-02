@@ -83,7 +83,7 @@
             </form>    
                 <td>
 
-                    <form class="frminline" action="DeleteCloud.php" method="post" onsubmit="return confirmDelete();">
+                    <form class="frminline" action="deleteitem.php" method="post" onsubmit="return confirmDelete();">
                         <input type="hidden" name="toyid" value="<?php echo $row['toyid'] ?>" />
                         <input type="submit" value="Delete" />
                     </form>

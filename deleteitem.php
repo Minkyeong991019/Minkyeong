@@ -8,7 +8,7 @@
     $stmt= $pdo->prepare($sql);
     $stmt->bindValue(':toyid', $_POST['toyid'], PDO::PARAM_INT);
     $stmt->execute();
-    die("You've deleted the item '$toyid' <a href='admin.php'>click here</a> to continue.");
+    die("You've deleted the item '$toyid' <a href='Admin.php'>click here</a> to continue.");
 }
 ?>
 

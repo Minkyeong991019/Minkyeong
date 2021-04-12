@@ -43,6 +43,7 @@ if(isset($_POST['toyid'], $_POST['toyname'], $_POST['image'], $_POST['price'], $
     $image = "";
     $extension = "";
     
+    //
     if (isset($_FILES['image']) && $_FILES['image']['size'] != 0) {
         $temp_name = $_FILES['image']['tmp_name'];
         $name = $_FILES['image']['name'];

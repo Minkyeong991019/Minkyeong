@@ -2,7 +2,7 @@
     include("index.php");
 ?>
 <?php	
-	if( isset($_POST['toyid']) ){
+	if( isset($_POST['toyid']) ){//
     
     $sql = "DELETE FROM Toyproduct WHERE toyid = :toyid";
     $stmt= $pdo->prepare($sql);

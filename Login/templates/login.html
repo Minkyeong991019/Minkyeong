@@ -8,51 +8,50 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<title>Login
-	</title>
+	<title>Login</title>
 
 	<style>
 		body {
-			background-color: lavender;
+			background-image: url(https://cdn.hipwallpaper.com/i/34/2/wbNgmd.jpg);
 			width: 100%;
+		}
+		.btn-dark {
+			color: #fff;
+			background-color: cadetblue;
 		}
 	</style>
 </head>
 <body>
+	
 	<div class="container-fluid" style="font-family:'Lucida Handwriting', cursive;">
-		<div id="header">
-			<div class="main">LifesTravel</div>
-		</div>
-
-		<div id="homeMenu" >
-			<ul style="margin-top: 8px;">
-				<li><a class="home" href="Homepage.html">Home</a></li>
-				<li><a class="cart" href="cart.html">Cart</a></li>
-				<li><a class="tuor" href="tour.html">Tuor</a></li>
-			</ul>
-		</div>
 
 		<div class="row">
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4"><h2>Login</h2>
-  <form action="/action_page.php">
-    <div class="form-group">
-      <label for="email">User name:</label>
-      <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-    </div>
-    <div style="text-align: center;">
-    	<button type="submit" class="btn btn-dark" >Login</button>
-    	<button type="submit" class="btn btn-dark" ><a href="/Register" style="text-decoration: none; color: white">Register</a></button>
-    </div>
-    
-  </form></div>
-		<div class="col-sm-4"></div>
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4" style="margin-top: 12%; color: crimson;"><h2 style="text-align: center; color: crimson;font-family: inherit;">Login</h2>
+				<br>
+				<form action="/loginManager" method="POST">
+					<div class="form-group">
+						<label for="email">User name:</label>
+						<input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required="">
+					</div>
+					<br>
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="passWord" required="">
+					</div>
+					<div style="text-align: center;">
+						<button type="submit" class="btn btn-dark" >Login</button>
+						<button type="submit" class="btn btn-dark" ><a href="/Register" style="text-decoration: none; color: white">Register</a></button>
+					</div>
+				</form>
+				<br>
+				<div style="text-align: center;">
+					<a href="/">Home</a>
+				</div>
+			</div>
+			<div class="col-sm-4"></div>
 		</div>
 	</div>
-
+	
 </body>
 </html>

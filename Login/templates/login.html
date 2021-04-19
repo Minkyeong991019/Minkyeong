@@ -29,15 +29,16 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4" style="margin-top: 12%; color: crimson;"><h2 style="text-align: center; color: crimson;font-family: inherit;">Login</h2>
 				<br>
-				<form action="/loginManager" method="POST">
+				<form action="/login/loginManager" method="POST">
+					{% csrf_token %}
 					<div class="form-group">
 						<label for="email">User name:</label>
-						<input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required="">
+						<input type="text" class="form-control" name="userName" placeholder="Enter username" name="username" required="">
 					</div>
 					<br>
 					<div class="form-group">
 						<label for="pwd">Password:</label>
-						<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="passWord" required="">
+						<input type="password" class="form-control" name="passWord" placeholder="Enter password" name="passWord" required="">
 					</div>
 					<div style="text-align: center;">
 						<button type="submit" class="btn btn-dark" >Login</button>

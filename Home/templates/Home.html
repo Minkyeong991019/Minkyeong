@@ -17,15 +17,6 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="{% static 'images/ie8-panel/warning_bar_0000_us.jpg'%}" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
-      </div>
-    </div>
     <div class="page">
       <header class="section page-header">
         <!-- RD Navbar-->
@@ -40,7 +31,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img src="{% static 'images/logo-default.png'%}" alt="" style="width: 128px;height: 88px;" /></a>
+                    <!--Brand--><a class="brand" href="/"><img src="{% static 'images/logo-default.png'%}" alt="" style="width: 128px;height: 68px;" /></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -59,7 +50,7 @@
                         <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
                       </div>
                     </li>
-                  </ul><a class="button button-md button-default-outline-2 button-ujarak" href="#">Login</a>
+                  </ul><a class="button button-md button-default-outline-2 button-ujarak" href="/login">Login</a>
                 </div>
               </div>
             </div>

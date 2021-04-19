@@ -12,12 +12,13 @@
 
 	<style>
 		body {
-			background-image: url(https://cdn.hipwallpaper.com/i/34/2/wbNgmd.jpg);
+			background-image: url(https://pbs.twimg.com/media/DXPC2VvVQAACGQQ.jpg:large);
 			width: 100%;
+			background-repeat: no-repeat;
 		}
 		.btn-dark {
 			color: #fff;
-			background-color: cadetblue;
+			background-color: brown;
 		}
 	</style>
 </head>
@@ -40,14 +41,17 @@
 						<label for="pwd">Password:</label>
 						<input type="password" class="form-control" name="passWord" placeholder="Enter password" name="passWord" required="">
 					</div>
+					<br>	
+					<p style="text-align: center; color: magenta; font-size: 20px;"><b>{{error}}</b></p>
 					<div style="text-align: center;">
 						<button type="submit" class="btn btn-dark" >Login</button>
 						<button type="submit" class="btn btn-dark" ><a href="/Register" style="text-decoration: none; color: white">Register</a></button>
 					</div>
 				</form>
 				<br>
+
 				<div style="text-align: center;">
-					<a href="/">Home</a>
+					<a href="/" class="btn btn-dark">Home</a>
 				</div>
 			</div>
 			<div class="col-sm-4"></div>

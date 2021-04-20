@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -15,133 +14,140 @@
 			width: 100%;
 		}
 		#header {/*아이디로 HTML페이지에 지정한 것은 # 로 나타낸다.*/
-	border-bottom-style: solid;/*테두리가 border이고 스타일은 선(solid)이고 bottom에만 표시한다는 것이다.*/
-	border-color: white;
-	color: #44AEFF;
-	font-family: "Lucida Handwriting", cursive;/*글꼴지정.*/
-	margin-bottom: 10px;/*마진은 테두리 밖에 쪽의 공백을 두는 것을 의미한다.*/
-}
-#header .main { /*header라는 아이디 안에 sitename이라는 클래스에 해당딘다는 것.*/
-	font-size: 40px;
-	text-align: center;/*글짜의 위치를 지정한다.*/
-}
+			border-bottom-style: solid;/*테두리가 border이고 스타일은 선(solid)이고 bottom에만 표시한다는 것이다.*/
+			border-color: white;
+			color: #44AEFF;
+			font-family: "Lucida Handwriting", cursive;/*글꼴지정.*/
+			margin-bottom: 10px;/*마진은 테두리 밖에 쪽의 공백을 두는 것을 의미한다.*/
+		}
+		#header .main { /*header라는 아이디 안에 sitename이라는 클래스에 해당딘다는 것.*/
+			font-size: 40px;
+			text-align: center;/*글짜의 위치를 지정한다.*/
+		}
 
-#homeMenu {/*이 아이디는 테두리를 나타내기 위해서이다.*/
-	height: 40px;
-	width: auto;
-	border-bottom-style: solid; 
-	border-color: white;
-}
-#homeMenu ul li{/*homeMenu라는 아이디 안에 ul안에 li들에 해당된다는 것이다.*/
-	font-size: 20px;
-	font-weight: bold;/*글꼴을 진하게 표시한다.*/
-	font-family: "Lucida Handwriting", cursive;
-	list-style: none;/*글짜 앞에 쩜으로 표시되는 것을 없앤다.*/
-	float: left;/*li의 모든 나열을 오른쪽으로 차곡차곡 쌓아 간다는 것이다.*/
-	padding-right: 20px;/*패딩은 테두리 안쪽의 공백을 두는 것을 의미한다.*/
-}
-#homeMenu .tuor {
-	color: #44AEFF;
-	text-decoration: none;/*a 테그로 인해 링크가 연결된 상태에서 밑줄 형태를 없앤다.*/
-}
-#homeMenu .tuor:hover {/*마우스를 가져다 대었을때 주는 스타일.*/
-	color: white;
-}
-#homeMenu .cart {
-	color: #44AEFF;
-	text-decoration: none;
-}
-#homeMenu .cart:hover {
-	color: white;
-}
-#homeMenu .login {
-	color: #44AEFF;
-	text-decoration: none;
-}
-#homeMenu .login:hover {
-	color: white;
-}
-#homeMenu .home {
-	color: #44AEFF;
-	text-decoration: none;
-}
-#homeMenu .home:hover {
-	color: white;
-}
-.L {
-	font-size: 30px;
-	text-align: center;
-	color: black;
-	font-family: "Lucida Handwriting", cursive;
-	margin-bottom: 70px;
-}
+		#homeMenu {/*이 아이디는 테두리를 나타내기 위해서이다.*/
+			height: 40px;
+			width: auto;
+			border-bottom-style: solid; 
+			border-color: white;
+		}
+		#homeMenu ul li{/*homeMenu라는 아이디 안에 ul안에 li들에 해당된다는 것이다.*/
+			font-size: 20px;
+			font-weight: bold;/*글꼴을 진하게 표시한다.*/
+			font-family: "Lucida Handwriting", cursive;
+			list-style: none;/*글짜 앞에 쩜으로 표시되는 것을 없앤다.*/
+			float: left;/*li의 모든 나열을 오른쪽으로 차곡차곡 쌓아 간다는 것이다.*/
+			padding-right: 20px;/*패딩은 테두리 안쪽의 공백을 두는 것을 의미한다.*/
+		}
+		#homeMenu .tuor {
+			color: #44AEFF;
+			text-decoration: none;/*a 테그로 인해 링크가 연결된 상태에서 밑줄 형태를 없앤다.*/
+		}
+		#homeMenu .tuor:hover {/*마우스를 가져다 대었을때 주는 스타일.*/
+			color: white;
+		}
+		#homeMenu .cart {
+			color: #44AEFF;
+			text-decoration: none;
+		}
+		#homeMenu .cart:hover {
+			color: white;
+		}
+		#homeMenu .login {
+			color: #44AEFF;
+			text-decoration: none;
+		}
+		#homeMenu .login:hover {
+			color: white;
+		}
+		#homeMenu .home {
+			color: #44AEFF;
+			text-decoration: none;
+		}
+		#homeMenu .home:hover {
+			color: white;
+		}
+		.L {
+			font-size: 30px;
+			text-align: center;
+			color: black;
+			font-family: "Lucida Handwriting", cursive;
+			margin-bottom: 70px;
+		}
 
-#textbox {
-	margin-top: 100px;
-	float: center;
-	text-align: center;
-	font-size: 20px;
-	font-family: "Lucida Handwriting", cursive;
-}
-#textbox .B {
-	border-left-style: solid;
-	border-right-style: solid;
-	border-color: white;
-	padding-top: 20px;
-	margin-left: 25%;
-	margin-right: 25%;
-}
+		#textbox {
+			margin-top: 100px;
+			float: center;
+			text-align: center;
+			font-size: 20px;
+			font-family: "Lucida Handwriting", cursive;
+		}
+		#textbox .B {
+			border-left-style: solid;
+			border-right-style: solid;
+			border-color: white;
+			padding-top: 20px;
+			margin-left: 25%;
+			margin-right: 25%;
+		}
 	</style>
 </head>
 <body>
 	<div class="container-fluid">
-		<div id="header">
-			<div class="main">Register</div>
-		</div>
 
 		<div id="homeMenu">
 			<ul style="margin-top: 8px;">
-				<li><a class="home" href="Homepage.html">Home</a></li>
-				<li><a class="cart" href="cart.html">Cart</a></li>
-				<li><a class="tuor" href="tour.html">Tuor</a></li>
+				<li><a class="home" href="/">Home</a></li>
 			</ul>
 		</div>
 
 		<div class="row" style="font-family:'Lucida Handwriting', cursive;">
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4">
-		<h2 style="margin-top: 20px; text-align: center;">-- Register --</h2>
-		<br>
- <form action="">
-				<div class="form-group">
-					<label for="usr" style="float: left;"><b>User Name:</b></label>
-			      	<input type="text" class="form-control" id="usr" name="username" placeholder="User Name">
-			    </div>
-			    <div class="form-group">
-			    	<label for="pwd" style="float: left;"><b>Password:</b></label>
-			      	<input type="password" class="form-control" id="pwd" name="password" placeholder="Password" >
-			    </div>
-			    <div class="form-group">
-			    	<label for="pnb" style="float: left;"><b>Phone Number:</b></label>
-			      	<input type="text" class="form-control" id="pnb" name="phonenumer" placeholder="Phone Number" >
-			    </div>
-			    <div class="form-group">
-			    	<label for="email" style="float: left;"><b>Email address:</b></label>
-				    <input type="email" class="form-control" placeholder="Enter email" id="email" >
-				</div>
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<h2 style="margin-top: 20px; text-align: center;">-- Register --</h2>
+				<br>
+				<form action="/login/RegisterAcount" method="POST">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="usr" style="float: left;"><b>User Name:</b></label>
+						<input type="text" class="form-control" id="usr" name="username" placeholder="User Name" required="">
+					</div>
+					<div class="form-group">
+						<label for="pwd" style="float: left;"><b>Password:</b></label>
+						<input type="password" class="form-control" id="pwd" name="password1" placeholder="Password" required="">
+					</div>
+					<div class="form-group">
+						<label for="pwd" style="float: left;"><b>Password confirmation:</b></label>
+						<input type="password" class="form-control" id="pwd" name="password2" placeholder="Password" required="">
+					</div>
+					<div class="form-group">
+						<label for="pnb" style="float: left;"><b>Phone Number:</b></label>
+						<input type="number" class="form-control" id="pnb" name="phone" placeholder="Phone Number" required="">
+					</div>
+					<div class="form-group">
+						<label for="email" style="float: left;"><b>Email address:</b></label>
+						<input type="email" class="form-control" placeholder="Enter email" id="email" required="" pattern="[^ @]*@[^ @]*">
+					</div>
+					<div class="form-group">
+						<label for="usr" style="float: left;"><b>Address:</b></label>
+						<input type="text" class="form-control" id="usr" name="address" placeholder="User Name" required="">
+					</div>
+					<div>
+						<p style="color: red;">{{error}}</p>
+					</div>
 
-				<div style="text-align: center;">
-				<button type="submit" class="btn btn-dark">Submit</button>
-			    <button type="submit" class="btn btn-dark"><a class="login" href="/" style="color: white; text-decoration: none;">Go back to Login</a></button>
+					<div style="text-align: center;">
+						<button type="submit" class="btn btn-dark">Submit</button>
+						<button type="submit" class="btn btn-dark"><a class="login" href="/" style="color: white; text-decoration: none;">Go back to Login</a></button>
+					</div>
+
 				</div>
-			    
 			</div>
-		</div>
-</form>
+		</form>
 	</div>
-		<div class="col-sm-4"></div>
-		</div>
-	</div>
+	<div class="col-sm-4"></div>
+</div>
+</div>
 
 </body>
 </html>

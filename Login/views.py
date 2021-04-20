@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate
 from .models import User
 from django.db import connection
 from django.shortcuts import redirect
-
+from django.contrib.auth.models import Group
 
 # Create your views here.
 def login(request):
@@ -40,3 +40,27 @@ def loginManager(request):
             return redirect('/')
         else:
             return render(request, 'login.html')
+def RegisterAcount(request):
+    if request.method == 'POST':
+        userName = request.POST.get('username','')
+        passWord1 = request.POST.get('password1','')
+        passWord2 = request.POST.get('password2','')
+        email = request.POST.get('email','')
+        phone = request.POST.get('phone','')
+        address = request.POST.get('address','')
+        a = User.objects.filter(username = userName)
+        if (passWord1 != passWord2):
+            error = "Password confirmation is wrong !"
+            return render(request, 'Register.html',{'error': error})
+        elif len(a) != 0:
+            error = "Username is already taken"
+            return render(request, 'Register.html',{'error': error})
+        elif passWord1 == passWord2:
+            idguest = Group.objects.filter(name = 'Guest')[0].id 
+            User.objects.create_user(username=userName, password=passWord1, email=email,PhoneNumber=phone, Address=address)
+            user = User.objects.get(pk = User.objects.latest('id').id)
+            user.groups.add(idguest)
+            return redirect('/login')
+
+    else:
+        return render(request, 'Register.html')

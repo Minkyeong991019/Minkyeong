@@ -30,7 +30,7 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4" style="margin-top: 12%; color: crimson;"><h2 style="text-align: center; color: crimson;font-family: inherit;">Login</h2>
 				<br>
-				<form action="/login/loginManager" method="POST">
+				<form action="/login/CheckAccount" method="POST">
 					{% csrf_token %}
 					<div class="form-group">
 						<label for="email">User name:</label>
@@ -45,7 +45,7 @@
 					<p style="text-align: center; color: magenta; font-size: 20px;"><b>{{error}}</b></p>
 					<div style="text-align: center;">
 						<button type="submit" class="btn btn-dark" >Login</button>
-						<button type="submit" class="btn btn-dark" ><a href="/Register" style="text-decoration: none; color: white">Register</a></button>
+						<button type="submit" class="btn btn-dark" ><a href="/login/Register" style="text-decoration: none; color: white">Register</a></button>
 					</div>
 				</form>
 				<br>

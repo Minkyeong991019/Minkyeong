@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User
+from .models import User,Category,Packet,Service,Tour_guide,Booking,Contacts
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserCreationForm
 # Register your models here.
@@ -14,4 +14,28 @@ class UserAdmin(BaseUserAdmin):
 		}),
 	)
 admin.site.register(User, UserAdmin)
-# Register your models here.
+class CategoryAdmin(admin.ModelAdmin):
+	list_display = ['Name', 'Type','Price','Decription']
+	list_filter = ['Name']
+	search_fields = ['Name']
+admin.site.register(Category, CategoryAdmin)
+class ServiceAdmin(admin.ModelAdmin):
+	list_display = ['Name', 'PacketID','Decription']
+	list_filter = ['Name']
+	search_fields = ['Name']
+admin.site.register(Service, ServiceAdmin)
+class Tour_guideAdmin(admin.ModelAdmin):
+	list_display = ['Name', 'Email','PhoneNumber','CategoryID', 'Decription','Status']
+	list_filter = ['Name']
+	search_fields = ['Name']
+admin.site.register(Tour_guide, Tour_guideAdmin)
+class BookingAdmin(admin.ModelAdmin):
+	list_display = ['UserID', 'CategoryID','PacketID', 'ServiceID','Status']
+	list_filter = ['UserID']
+	search_fields = ['UserID']
+admin.site.register(Booking, BookingAdmin)
+class ContactsAdmin(admin.ModelAdmin):
+	list_display = ['Name', 'Email','PhoneNumber', 'Decription']
+	list_filter = ['Name']
+	search_fields = ['Name']
+admin.site.register(Contacts, ContactsAdmin)

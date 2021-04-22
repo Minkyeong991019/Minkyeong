@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{% static 'css/fonts.css'%}">
     <link rel="stylesheet" href="{% static '/style1.css'%}">
     <link rel="stylesheet" href="PATH/TO/iconic-glyphs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
@@ -89,7 +91,7 @@
                 <div class="row">
                   <div class="col-md-10">
                     <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">Enjoy the Best Destinations with Our Travel Agency</h6>
-                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Explore</span><span class="font-weight-bold"> The World</span></h2><a class="button button-default-outline button-ujarak" href="#" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
+                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Explore</span><span class="font-weight-bold"> The World</span></h2><a class="button button-default-outline button-ujarak" href="/Contact" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
                   </div>
                 </div>
               </div>
@@ -101,7 +103,7 @@
                 <div class="row">
                   <div class="col-md-10">
                     <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">A team of professional Travel Experts</h6>
-                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Trust</span><span class="font-weight-bold"> Our Experience</span></h2><a class="button button-default-outline button-ujarak" href="#" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
+                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Trust</span><span class="font-weight-bold"> Our Experience</span></h2><a class="button button-default-outline button-ujarak" href="/Contact" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
                   </div>
                 </div>
               </div>
@@ -114,7 +116,11 @@
                 <div class="row">
                   <div class="col-md-10">
                     <h6 class="text-uppercase" data-caption-animate="fadeInRight" data-caption-delay="0">Build your Next Holiday Trip with Us</h6>
-                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100"><span>Create</span><span class="font-weight-bold"> Your Tour</span></h2><a class="button button-default-outline button-ujarak" href="#" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
+                    <h2 class="oh font-weight-light" data-caption-animate="slideInUp" data-caption-delay="100">
+                      <span>Create</span>
+                      <span class="font-weight-bold"> Your Tour</span>
+                    </h2>
+                    <a class="button button-default-outline button-ujarak" href="/Contact" data-caption-animate="fadeInLeft" data-caption-delay="0">Get in touch</a>
                   </div>
                 </div>
               </div>
@@ -161,7 +167,8 @@
       <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-            <div class="col-lg-6 text-center wow fadeInUp"><img src="{% static 'images/index-3-556x382.jpg'%}" alt="" width="556" height="382"/>
+            <div class="col-lg-6 text-center wow fadeInUp">
+              <img src="{% static 'images/index-3-556x382.jpg'%}" alt="" width="556" height="382"/>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
               <div class="box-width-lg-470">
@@ -170,23 +177,38 @@
                 <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-md-left" id="tabs-7">
                   <!-- Nav tabs-->
                   <ul class="nav nav-tabs">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-7-1" data-toggle="tab">About us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-2" data-toggle="tab">Why choose us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-3" data-toggle="tab">Our mission</a></li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" href="#tabs-7-1" data-toggle="tab">About us</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" href="#tabs-7-2" data-toggle="tab">Why choose us</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" href="#tabs-7-3" data-toggle="tab">Our mission</a>
+                    </li>
                   </ul>
                   <!-- Tab panes-->
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="tabs-7-1">
                       <p>Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle">
+                        <a class="button button-secondary button-pipaluk" href="/Contact">Get in Touch</a>
+                        <a class="button button-black-outline button-md" href="about.html">Read More</a>
+                      </div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-2">
                       <p>We are proud to offer excellent quality and value for money in our tours, which give you the chance to experience your chosen destination in an authentic and exciting way.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle">
+                        <a class="button button-secondary button-pipaluk" href="/Contact">Get in Touch</a>
+                        <a class="button button-black-outline button-md" href="about.html">Read More</a>
+                      </div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-3">
                       <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for every travel service available in the industry.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle">
+                        <a class="button button-secondary button-pipaluk" href="/Contact">Get in Touch</a>
+                        <a class="button button-black-outline button-md" href="about.html">Read More</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -429,7 +451,10 @@
             <article class="thumbnail thumbnail-mary">
               <div class="thumbnail-mary-figure"><img src="{% static 'images/gallery-image-2-270x195.jpg'%}" alt="" width="270" height="195"/>
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'images/gallery-image-2-1200x800-original.jpg'%}" data-lightgallery="item"><img src="{% static 'images/gallery-image-2-270x195.jpg'%}" alt="" width="270" height="195"/></a>
+              <div class="thumbnail-mary-caption">
+                <a class="icon fl-bigmug-line-zoom60" href="{% static 'images/gallery-image-2-1200x800-original.jpg'%}" data-lightgallery="item">
+                <img src="{% static 'images/gallery-image-2-270x195.jpg'%}" alt="" width="270" height="195"/>
+              </a>
               </div>
             </article>
             <!-- Thumbnail Classic-->
@@ -533,7 +558,7 @@
                       <li><a href="#">Gallery</a></li>
                       <li><a href="#">Blog</a></li>
                     </ul>
-                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="#">Get in touch</a></div>
+                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="/Contact">Get in touch</a></div>
                   </div>
                 </div>
               </div>

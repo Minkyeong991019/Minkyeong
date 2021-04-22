@@ -117,8 +117,8 @@
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-chat55"></div>
                   <div class="box-contacts-decor"></div>
-                  <p class="box-contacts-link"><a href="mailto:#">mail@demolink.org</a></p>
-                  <p class="box-contacts-link"><a href="mailto:#">info@demolink.org</a></p>
+                  <p class="box-contacts-link"><a href="mailto:#">kimminkyong@.org</a></p>
+                  <p class="box-contacts-link"><a href="mailto:#">info@gamil.com</a></p>
                 </div>
               </article>
             </div>
@@ -137,7 +137,8 @@
               <p>If you have any questions, just fill in the contact form, and we will answer you shortly.</p>
             </div>
           </article>
-          <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+          <form method="POST" action="/RegisterInformation">
+            {% csrf_token %}
             <div class="row row-14 gutters-14">
               <div class="col-md-4">
                 <div class="form-wrap">

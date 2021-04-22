@@ -14,15 +14,21 @@ class Category(models.Model):
 	Price = models.IntegerField()
 	Decription = models.TextField()
 	Image = models.ImageField()
+	def __str__(self):
+		return self.Name
 
 class Packet(models.Model):
 	Name = models.CharField(max_length=30)
 	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)
 	Decription = models.TextField()
+	def __str__(self):
+		return self.Name
 class Service(models.Model):
 	Name = models.CharField(max_length=30)
 	PacketID = models.ForeignKey(Packet, default=None, on_delete=models.CASCADE, blank=True, null = True)
 	Decription = models.TextField()
+	def __str__(self):
+		return self.Name
 class Tour_guide(models.Model):
 	Name = models.CharField(max_length=30)
 	Email = models.CharField(max_length = 60, null = True, blank = True,)
@@ -30,6 +36,8 @@ class Tour_guide(models.Model):
 	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)
 	Decription = models.TextField()
 	Status = ((0,"Free"),(1,"Busy"))
+	def __str__(self):
+		return self.Name
 class Booking(models.Model):
 	UserID = models.ForeignKey(User, default=None, on_delete=models.CASCADE, blank=True)
 	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)

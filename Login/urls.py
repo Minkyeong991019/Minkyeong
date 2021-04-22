@@ -5,10 +5,10 @@ from . import views
 
 urlpatterns = [
     path('', views.login),
-    path('/forgotpassword',views.forgotpassword),
-    path('/Register', views.Register),
-    path('/CheckAccount', views.loginManager),
-    path('/RegisterAcount', views.RegisterAcount)
+    path('forgotpassword',views.forgotpassword),
+    path('Register', views.Register),
+    path('CheckAccount', views.loginManager),
+    path('RegisterAcount', views.RegisterAcount)
     
 
 ]

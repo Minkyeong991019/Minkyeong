@@ -15,8 +15,8 @@ def RegisterInformation(request):
 		Name = request.POST.get('name','')
 		Email = request.POST.get('email','')
 		Phone = request.POST.get('phone','')
-		Decription = request.POST.get('message','')
-		Contacts.objects.create(Name = Name,PhoneNumber = phone,Email = Email, Decription= Decription)
-		return render(request, '/')
+		message = request.POST.get('message','')
+		Contacts.objects.create(Name = Name,PhoneNumber = Phone,Email = Email, Decription= message)
+		return render(request, 'Home.html')
 	else:
 		return render(request, 'contact-us.html')

@@ -13,6 +13,8 @@ class Category(models.Model):
 	Type = models.CharField(max_length=30,null = True)
 	Price = models.IntegerField()
 	Decription = models.TextField()
+	Image = models.ImageField()
+
 class Packet(models.Model):
 	Name = models.CharField(max_length=30)
 	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)

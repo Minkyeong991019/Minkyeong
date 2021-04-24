@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+<head>
+  <title>Typography</title>
+  {% load static %}
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{% static 'css/fonts.css'%}">
+  <link rel="stylesheet" href="{% static '/style1.css'%}">
+  <link rel="stylesheet" href="PATH/TO/iconic-glyphs.css">
+  <link rel="stylesheet" href="{% static 'css1/jquery-ui.css'%}" />
+  <link href="{% static 'css1/style.css'%}" rel="stylesheet" type="text/css" media="all"/>
+  <link href="{% static 'css1/font-awesome.min.css'%}" rel="stylesheet" type="text/css" media="all">
+
+  <!-- online-fonts -->
+  <link href="//fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <style>
+    .ie-panel{
+      display: none;background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+      clear: both;text-align:center;
+      position: relative;z-index: 1;} 
+      html.ie-10 .ie-panel, 
+      html.lt-ie-10 .ie-panel {display: block;}
+      h1 {
+        font-size: 3.6em;
+        margin-top: 0.7em;
+        letter-spacing: 6px;
+      }
+      .page {
+        text-align: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      {% include "toolbar.html" %}
+      <h1>Travel Booking</h1>
+      <!-- main-section -->
+      <div class="head agile">
+        <div class="login w3">
+          <div class="sap_tabs">
+            <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">         
+              <div class="resp-tabs-container">
+               <div id='checklog' style='margin-top: 50px;width: 100%; text-align: center; display: none;'>
+                <br>
+                <br>
+                <div style='width: 100%; text-align: center;'>
+                  <h3>You must login before booking !</h3>
+                </div>
+                <div style='align-items: center;margin: 30px; background-color: yellow;'class='btn btn-primary' >
+                  <a href='/login'>Login now</a>
+                </div>
+              </div>
+              <div class="tab-1 resp-tab-content" style="display: block;" id="displa" >
+                <br>
+                <br>
+                <div class="login-top agileinfo">
+                  <h2>Search for flights</h2>
+                  <form action="/addbooking" method="POST">
+                    {% csrf_token %}
+                    <div class="w3_agileits_main_grid w3l_main_grid">
+                      <div class="w3_agileits_main_grid w3l_main_grid">
+                        <div class="agileits_grid">
+                          <h5>Name</h5>
+                          <input type="text" name="name" style="width: 97%">
+                        </div>
+                      </div>
+                      <div class="w3_agileits_main_grid w3l_main_grid">
+                        <div class="agileits_grid">
+                          <h5>Time you want to go</h5>
+                          <input type="datetime-local" name="time" style="width: 97%">
+                        </div>
+                      </div>
+                      <div class="agileits_grid">
+                        <h5>Packet</h5>
+                        <div class="name">
+                         <select id="category1" name="Packet" required="">
+                          {% for packet in packet %}
+                          <option value="{{packet.id}}" title="{{packet.Decription}}">{{packet.Name}}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div class="w3_agileits_main_grid w3l_main_grid">
+                    <div class="agileits_grid">
+                      <h5>Chose Service</h5>
+                      {% for service in service %}
+                      <input type="checkbox" name="service" value="{{service.id}}">
+                      <label for="vehicle1" title="{{service.Decription}}">{{service.Name}}</label><br>
+                      {% endfor %}
+                    </div>
+                  </div>
+                <div>
+                  <textarea name="decrition" style="height: 150px; width: 97%" placeholder="Describe more about your trip..." required=""></textarea>
+                </div>
+                <div class="clear"></div>
+                <div class="aitssubmitw3ls">
+                  <input type="submit" name="submit" value="Booking">
+                </div>
+              </form>
+              <div>
+                <br>
+                <h3>If your packet is not in the system, please contact us for assistance in  <a href="/Contact" style="color: blue;"><u>Hear</u></a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "footer.html" %}
+<script type="text/javascript">
+  ShowMesger()
+  function ShowMesger(){
+    var html = "{{checklogin}}"
+    if (html.length > 0) 
+    {
+      document.getElementById("displa").style.display = "none";
+      document.getElementById("checklog").style.display = "block";
+    }
+  }
+</script>
+</body>
+</html>

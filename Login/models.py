@@ -11,12 +11,10 @@ class User(AbstractUser):
 class Category(models.Model):
 	Name = models.CharField(max_length=30)
 	Type = models.CharField(max_length=30,null = True)
-	Price = models.IntegerField()
 	Decription = models.TextField()
 	Image = models.ImageField()
 	def __str__(self):
 		return self.Name
-
 class Packet(models.Model):
 	Name = models.CharField(max_length=30)
 	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)
@@ -25,27 +23,33 @@ class Packet(models.Model):
 		return self.Name
 class Service(models.Model):
 	Name = models.CharField(max_length=30)
-	PacketID = models.ForeignKey(Packet, default=None, on_delete=models.CASCADE, blank=True, null = True)
 	Decription = models.TextField()
 	def __str__(self):
 		return self.Name
 class Tour_guide(models.Model):
 	Name = models.CharField(max_length=30)
-	Email = models.CharField(max_length = 60, null = True, blank = True,)
+	Email = models.CharField(max_length = 60, null = True, blank = True)
 	PhoneNumber = models.IntegerField(blank=True, null = True)
-	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)
 	Decription = models.TextField()
-	Status = ((0,"Free"),(1,"Busy"))
+	Status = models.BooleanField(default=False, blank=True, null = True)
+	Image = models.ImageField()
 	def __str__(self):
 		return self.Name
 class Booking(models.Model):
+	Name = models.CharField(max_length=30, null = True, blank = True)
 	UserID = models.ForeignKey(User, default=None, on_delete=models.CASCADE, blank=True)
-	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)
 	PacketID = models.ForeignKey(Packet, default=None, on_delete=models.CASCADE, blank=True, null = True)
-	ServiceID = models.ForeignKey(Service, default=None, on_delete=models.CASCADE, blank=True, null = True)
-	Status = ((0,"Not yet started"),(1,"started"),(2,"Accomplished"))
+	Tour_guideID = models.ForeignKey(Tour_guide,default=None, on_delete=models.CASCADE, blank=True, null = True)
+	Status = models.BooleanField(default=False, blank=True, null = True)
+	Decription = models.TextField(null = True, blank = True)
+	Time = models.DateTimeField(null = True, blank = True)
+	def __str__(self):
+		return self.Name
 class Contacts(models.Model):
 	Name = models.CharField(max_length=30)
 	Email = models.CharField(max_length = 60, null = True, blank = True,)
 	PhoneNumber = models.IntegerField(blank=True, null = True)
 	Decription = models.TextField()
+class GroupService(models.Model):
+	BookingID = models.ForeignKey(Booking,default=None, on_delete=models.CASCADE, blank=True)
+	ServiceID = models.ForeignKey(Service, default=None, on_delete=models.CASCADE, blank=True, null = True)

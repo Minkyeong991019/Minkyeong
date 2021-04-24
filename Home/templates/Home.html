@@ -77,7 +77,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="/Contact"><img src="{% static 'images/cta-1-368x420.jpg'%}" alt="" width="368" height="420"/></a>
+                    <li><a href="/Booking"><img src="{% static 'images/cta-1-368x420.jpg'%}" alt="" width="368" height="420"/></a>
                       <h5 class="box-categories-title">Balloon Flights</h5>
                     </li>
                   </ul>
@@ -85,14 +85,14 @@
 
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="/Contact"><img src="{% static 'images/cta-2-368x420.jpg'%}" alt="" width="368" height="420"/></a>
+                    <li><a href="/Booking"><img src="{% static 'images/cta-2-368x420.jpg'%}" alt="" width="368" height="420"/></a>
                       <h5 class="box-categories-title">Mountain Holiday</h5>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="/Contact"><img src="{% static 'images/cta-3-368x420.jpg'%}" alt="" width="368" height="420"/></a>
+                    <li><a href="/Booking"><img src="{% static 'images/cta-3-368x420.jpg'%}" alt="" width="368" height="420"/></a>
                       <h5 class="box-categories-title">Beach Holidays</h5>
                     </li>
                   </ul>
@@ -168,7 +168,7 @@
                     <div class="box-icon-classic-icon fl-bigmug-line-equalization3"></div>
                   </div>
                   <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Personalized Matching</a></h5>
+                    <h5 class="box-icon-classic-title">Personalized Matching</h5>
                     <p class="box-icon-classic-text">Our unique matching system lets you find just the tour you want for your next holiday.</p>
                   </div>
                 </div>
@@ -181,7 +181,7 @@
                     <div class="box-icon-classic-icon fl-bigmug-line-circular220"></div>
                   </div>
                   <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Wide Variety of Tours</a></h5>
+                    <h5 class="box-icon-classic-title">Wide Variety of Tours</h5>
                     <p class="box-icon-classic-text">We offer a wide variety of personally picked tours with destinations all over the globe.</p>
                   </div>
                 </div>
@@ -194,7 +194,7 @@
                     <div class="box-icon-classic-icon fl-bigmug-line-favourites5"></div>
                   </div>
                   <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Highly Qualified Service</a></h5>
+                    <h5 class="box-icon-classic-title">Highly Qualified Service</h5>
                     <p class="box-icon-classic-text">Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
                   </div>
                 </div>
@@ -207,7 +207,7 @@
                     <div class="box-icon-classic-icon fl-bigmug-line-headphones32"></div>
                   </div>
                   <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">24/7 Support</a></h5>
+                    <h5 class="box-icon-classic-title">24/7 Support</h5>
                     <p class="box-icon-classic-text">You can always get professional support from our staff 24/7 and ask any question you have.</p>
                   </div>
                 </div>
@@ -220,7 +220,7 @@
                     <div class="box-icon-classic-icon fl-bigmug-line-hot67"></div>
                   </div>
                   <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Handpicked Hotels</a></h5>
+                    <h5 class="box-icon-classic-title">Handpicked Hotels</h5>
                     <p class="box-icon-classic-text">Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
                   </div>
                 </div>
@@ -233,7 +233,7 @@
                     <div class="box-icon-classic-icon fl-bigmug-line-wallet26"></div>
                   </div>
                   <div class="unit-body">
-                    <h5 class="box-icon-classic-title"><a href="#">Best Price Guarantee</a></h5>
+                    <h5 class="box-icon-classic-title">Best Price Guarantee</h5>
                     <p class="box-icon-classic-text">If you find tours that are cheaper than ours, we will compensate the difference.</p>
                   </div>
                 </div>
@@ -252,15 +252,14 @@
               <!-- Product Big-->
               <article class="product-big">
                 <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="media/{{tours.Image}}" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-left"><a class="product-big-figure" href="/Booking"><img src="media/{{tours.Image}}" alt="" width="600" height="366"/></a></div>
                   <div class="unit-body">
                     <div class="product-big-body">
-                      <h5 class="product-big-title"><a href="#">{{tours.Name}}</a></h5>
+                      <h5 class="product-big-title"><a href="/Booking">{{tours.Name}}</a></h5>
                       <div class="group-sm group-middle justify-content-start">
-                        <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">{{tours.Type}}</a>
+                        <a class="product-big-reviews" href="/Booking">Title: {{tours.Type}}</a>
                       </div>
-                      <p class="product-big-text">{{tours.Decription}}</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
-                      <div class="product-big-price-wrap"><span class="product-big-price">${{tours.Price}}</span></div>
+                      <p class="product-big-text">{{tours.Decription}}</p><a class="button button-black-outline button-ujarak" href="/Booking">Buy This Tour</a>
                     </div>
                   </div>
                 </div>
@@ -275,10 +274,12 @@
         <div class="container">
           <h3 class="title-block find-car oh"><span class="d-inline-block wow slideInUp">Different People — One Mission</span></h3>
           <div class="row row-30 justify-content-center box-ordered">
+            {% for tourguide in tour_guide%}
             <div class="col-sm-6 col-md-5 col-lg-3">
               <!-- Team Modern-->
               <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="{% static 'images/user-1-118x118.jpg'%}" alt="" width="118" height="118"/></a>
+                <div class="team-modern-header"><a class="team-modern-figure" href="/Booking">
+                  <img class="img-circles" src="/media/{{tourguide.Image}}" alt="" width="118" height="118"/></a>
                   <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
                     <g>
                       <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
@@ -286,63 +287,13 @@
                   </svg>
                 </div>
                 <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Diana Robinson</a></h6>
-                  <p class="team-modern-status">Founder, Owner</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
+                  <h6 class="team-modern-name"><a href="/Booking">{{tourguide.Name}}</a></h6>
+                  <p class="team-modern-status">{{tourguide.Decription}}</p>
+                  <h6 class="team-modern-phone"><a href="tel:0{{tourguide.PhoneNumber}}">+ 0{{tourguide.PhoneNumber}}</a></h6>
                 </div>
               </article>
             </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Team Modern-->
-              <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="{% static 'images/user-2-118x118.jpg'%}" alt="" width="118" height="118"/></a>
-                  <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                    <g>
-                      <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Peter McMillan</a></h6>
-                  <p class="team-modern-status">Travel Agent</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Team Modern-->
-              <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="{% static 'images/user-3-118x118.jpg'%}" alt="" width="118" height="118"/></a>
-                  <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                    <g>
-                      <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">Jill Peterson</a></h6>
-                  <p class="team-modern-status">Tour Consultant</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Team Modern-->
-              <article class="team-modern">
-                <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="{% static 'images/user-4-118x118.jpg'%}" alt="" width="118" height="118"/></a>
-                  <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                    <g>
-                      <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="team-modern-caption">
-                  <h6 class="team-modern-name"><a href="#">James Smith</a></h6>
-                  <p class="team-modern-status">PR Manager</p>
-                  <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                </div>
-              </article>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </section>
@@ -352,7 +303,7 @@
           <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
             <div class="container">
               <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span class="d-block font-weight-semi-bold">Sign Up for 25% Discount!</span></h2>
-              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Want to get an instant discount for your next tour? Leave your email and sign up for our newsletter with 25% off all our offers.</p><a class="button button-secondary button-pipaluk" href="#">Book a Tour Now</a>
+              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Want to get an instant discount for your next tour? Leave your email and sign up for our newsletter with 25% off all our offers.</p><a class="button button-secondary button-pipaluk" href="/Booking">Book a Tour Now</a>
             </div>
           </div>
         </div>
@@ -418,100 +369,7 @@
           </div>
         </div>
       </section>
-      <footer class="section footer-corporate context-dark">
-        <div class="footer-corporate-inset">
-          <div class="container">
-            <div class="row row-40 justify-content-lg-between">
-              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInRight" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
-                    <ul class="footer-contacts d-inline-block d-sm-block">
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                          <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body"><a class="link-aemail" href="mailto:#">info@demolink.org</a></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                          <div class="unit-body"><a class="link-location" href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInDown" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
-                    <!-- Post Minimal 2-->
-                    <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="#">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
-                      <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">May 04, 2019</time>
-                      </div>
-                    </article>
-                    <!-- Post Minimal 2-->
-                    <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="#">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
-                      <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">May 04, 2019</time>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInLeft" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
-                    <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
-                      <li><a href="about.html">About us</a></li>
-                      <li><a href="#">Our Tours</a></li>
-                      <li><a href="#">Our Team</a></li>
-                      <li><a href="#">Gallery</a></li>
-                      <li><a href="#">Blog</a></li>
-                    </ul>
-                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="/Contact">Get in touch</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-corporate-bottom-panel">
-          <div class="container">
-            <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
-              <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
-                <div>
-                  <ul class="list-inline list-inline-sm footer-social-list-2">
-                    <li><a class="icon fa fa-facebook" href="#"></a></li>
-                    <li><a class="icon fa fa-twitter" href="#"></a></li>
-                    <li><a class="icon fa fa-google-plus" href="#"></a></li>
-                    <li><a class="icon fa fa-instagram" href="#"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 order-sm-first">
-                <!-- Rights-->
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Wonder Tour</span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
-              </div>
-              <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights"><a href="#">Privacy Policy</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+       {% include "footer.html" %}
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>

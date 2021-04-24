@@ -31,8 +31,8 @@ class Tour_guideAdmin(admin.ModelAdmin):
 admin.site.register(Tour_guide, Tour_guideAdmin)
 class BookingAdmin(admin.ModelAdmin):
 	list_display = ['Name','Time','UserID','PacketID','Status','Tour_guideID','Decription']
-	list_filter = ['UserID']
-	search_fields = ['UserID']
+	list_filter = ['Name']
+	search_fields = ['Name']
 admin.site.register(Booking, BookingAdmin)
 class ContactsAdmin(admin.ModelAdmin):
 	list_display = ['Name', 'Email','PhoneNumber', 'Decription']
@@ -42,8 +42,9 @@ admin.site.register(Contacts, ContactsAdmin)
 class GroupServiceAdmin(admin.ModelAdmin):
 	list_display = ['BookingID', 'ServiceID']
 	list_filter = ['BookingID']
+	search_fields = ['BookingID__Name']
 admin.site.register(GroupService, GroupServiceAdmin)
 class PacketAdmin(admin.ModelAdmin):
-	list_display = ['Name', 'CategoryID','Decription']
+	list_display = ['Name','Image','CategoryID','Decription']
 	list_filter = ['Name']
 admin.site.register(Packet, PacketAdmin)

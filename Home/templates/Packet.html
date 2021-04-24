@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+  	{% load static %}
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css'%}">
+    <link rel="stylesheet" href="{% static '/style1.css'%}">
+    <link rel="stylesheet" href="PATH/TO/iconic-glyphs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="page">
+      {% include "toolbar.html" %}
+      <section class="section section-sm bg-default">
+        <div class="container">
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Tour Packet</span></h3>
+          <div class="row row-sm row-40 row-md-50">
+          {% for packets in packet %}
+            <div class="col-sm-6 col-md-12 wow fadeInRight">
+              <!-- Product Big-->
+              <article class="product-big">
+                <div class="unit flex-column flex-md-row align-items-md-stretch">
+                  <div class="unit-left"><a class="product-big-figure" href="/Booking"><img src="media/{{packets.Image}}" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-body">
+                    <div class="product-big-body">
+                      <h5 class="product-big-title"><a href="/Booking">{{packets.Name}}</a></h5>
+                      <div class="group-sm group-middle justify-content-start">
+                        <a class="product-big-reviews" href="{{packets.AddressMap}}">Address</a>
+                      </div>
+                      <p class="product-big-text">{{packets.Decription}}</p><a class="button button-black-outline button-ujarak" href="/Booking">Buy This Tour</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {%endfor%}
+          </div>
+        </div>
+      </section>
+ 
+       {% include "footer.html" %}
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="{% static 'js/core.min.js'%}"></script>
+    <script src="{% static 'js/script.js'%}"></script>
+  </body>
+</html>

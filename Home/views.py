@@ -61,3 +61,6 @@ def addbooking(request):
 		return render(request, 'contact-us.html')
 	else:
 		return render(request,'Home.html')
+def Packets(request):
+	packet = Packet.objects.all()
+	return render(request,'Packet.html', {'packet': packet})

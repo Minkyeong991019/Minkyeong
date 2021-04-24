@@ -10,6 +10,7 @@ urlpatterns = [
     path('RegisterInformation', views.RegisterInformation),
     path('logout', views.logout),
     path('addbooking',views.addbooking),
+    path('Packet',views.Packets)
 
 
 ]

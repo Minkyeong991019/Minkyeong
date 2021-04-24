@@ -19,6 +19,8 @@ class Packet(models.Model):
 	Name = models.CharField(max_length=30)
 	CategoryID = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, blank=True, null = True)
 	Decription = models.TextField()
+	AddressMap = models.TextField(null = True, blank = True,default=None)
+	Image = models.ImageField(blank=True, null = True,default=None)
 	def __str__(self):
 		return self.Name
 class Service(models.Model):

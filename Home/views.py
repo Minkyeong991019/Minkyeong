@@ -62,7 +62,11 @@ def addbooking(request):
 		return render(request,'Home.html')
 def Packets(request):
 	packet = Packet.objects.all()
-	return render(request,'Packet.html', {'packet': packet})
+	if request.user.is_authenticated:
+		Status = "<a class='button button-md button-default-outline-2 button-ujarak' href='/logout'>Logout</a>"
+	else:
+		Status = "<a class='button button-md button-default-outline-2 button-ujarak' href='/login'>Login</a>"
+	return render(request,'Packet.html', {'packet': packet, 'Status': status})
 def PacketID(request,id):
 	packet = Packet.objects.filter(CategoryID = id)
 	return render(request,'Packet.html', {'packet': packet})

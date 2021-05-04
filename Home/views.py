@@ -66,7 +66,11 @@ def Packets(request):
 		Status = "<a class='button button-md button-default-outline-2 button-ujarak' href='/logout'>Logout</a>"
 	else:
 		Status = "<a class='button button-md button-default-outline-2 button-ujarak' href='/login'>Login</a>"
+<<<<<<< Updated upstream
 	return render(request,'Packet.html', {'packet': packet, 'Status': status})
 def PacketID(request,id):
 	packet = Packet.objects.filter(CategoryID = id)
 	return render(request,'Packet.html', {'packet': packet})
+=======
+	return render(request,'Packet.html', {'packet': packet,'Status': Status})
+>>>>>>> Stashed changes

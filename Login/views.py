@@ -28,9 +28,9 @@ def loginManager(request):
                     [userID]
                 )
                 auth_group = cursor.fetchall()[0][0]
-            request.session.set_expiry(86400)
-            auth_login(request, user)
             if(auth_group == "Guest"):
+                request.session.set_expiry(86400)
+                auth_login(request, user)
                 return redirect('/')
         else:
             error = {'error': 'Username or password is incorrect !'}

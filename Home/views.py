@@ -6,7 +6,6 @@ from django.contrib.auth import logout as django_logout
 # Create your views here.
 def Home(request):
 	tour_guide = Tour_guide.objects.all()
-	print(tour_guide[1].Name)
 	tour = Category.objects.all()
 	if request.user.is_authenticated:
 		Status = "<a class='button button-md button-default-outline-2 button-ujarak' href='/logout'>Logout</a>"
@@ -63,4 +62,11 @@ def addbooking(request):
 		return render(request,'Home.html')
 def Packets(request):
 	packet = Packet.objects.all()
+	if request.user.is_authenticated:
+		Status = "<a class='button button-md button-default-outline-2 button-ujarak' href='/logout'>Logout</a>"
+	else:
+		Status = "<a class='button button-md button-default-outline-2 button-ujarak' href='/login'>Login</a>"
+	return render(request,'Packet.html', {'packet': packet, 'Status': status})
+def PacketID(request,id):
+	packet = Packet.objects.filter(CategoryID = id)
 	return render(request,'Packet.html', {'packet': packet})
